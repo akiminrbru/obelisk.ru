@@ -405,6 +405,7 @@ body {
 }
 
 .zfooter__logo {
+    display: block;
     margin-bottom: 10px;
 }
 
@@ -974,3 +975,234 @@ body {
 }
 
 /* End mainPopular */
+
+/* mainGarant */
+
+.zmainGarant {
+    position: relative;
+}
+
+.zmainGarant__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 460px;
+}
+
+.zmainGarant__left {
+    position: absolute;
+    left: 0;
+    right: 50%;
+    top: 0;
+    bottom: 0;
+}
+
+.zmainGarant__left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.zmainGarant__right {
+    position: absolute;
+    right: 0;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    background: radial-gradient(140.79% 121.24% at 12.81% 16.62%, #29343A 0%, #5B6C74 100%);
+}
+
+.zmainGarant__content {
+    max-width: 650px;
+    padding: 105px 49px 105px 120px;
+}
+
+.zmainGarant__content h2 {
+    margin-bottom: 20px;
+}
+
+.zmainGarant__content p {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 135%;
+    margin-bottom: 42px;
+}
+
+.zmainGarant__content button {
+    padding: 14px 30px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 3px;
+    background: #B29470;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1300px) {
+    .zmainGarant__content {
+        padding: 90px 60px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .zmainGarant__content {
+        padding: 70px 40px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .zmainGarant__inner {
+        height: 430px;
+    }
+
+    .zmainGarant__content p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .zmainGarant__content {
+        padding: 40px 30px;
+    }
+
+    .zmainGarant__inner {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .zmainGarant__content {
+        max-width: 100%;
+    }
+
+    .zmainGarant__left {
+        position: static;
+    }
+
+    .zmainGarant__right {
+        position: static;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .zmainGarant__left img {
+        height: 227px;
+    }
+
+    .zmainGarant__content {
+        padding: 20px;
+        padding-bottom: 43px;
+    }
+
+    .zmainGarant__content h2 {
+        margin-bottom: 15px;
+    }
+
+    .zmainGarant__content p {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .zmainGarant__content button {
+        font-size: 14px;
+    }
+}
+
+/* End mainGarant */
+
+/* mainProducst */
+
+.zmainProducts {
+    background-color: #F8F9FA;
+}
+
+.zmainProducts__inner {
+    padding: 90px 0;
+}
+
+.zmainProducts__inner h2 {
+    margin-bottom: 35px;
+}
+
+.zmainProducts__all {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
+
+.zmainProducts__all a {
+    color: #828282;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.zmainProducts__item {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+    padding: 5px;
+    padding-bottom: 14px;
+    max-width: 310px;
+    border-radius: 3px;
+    background: #FFF;
+}
+
+.zmainProducts__item-img {
+    width: 100%;
+    height: 300px;
+}
+
+.zmainProducts__item-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.zmainProducts__item-content {
+    padding: 0 8px;
+}
+
+.zmainProducts__item-title {
+    color: #34322D;
+    text-align: center;
+    font-size: 15px;
+    line-height: 135%;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.zmainProducts__item-desc {
+    color: #828282;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 135%;
+    margin-bottom: 34px;
+}
+
+.zmainProducts__item-price {
+    color: #34322D;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 135%;
+    margin-bottom: 20px;
+}
+
+.zmainProducts__item-link {
+    margin-top: auto;
+    color: #34322D;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 135%;
+    border-radius: 3px;
+    border: 1px solid #B29470;
+    padding: 12px 30px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+/* End mainProducts */
