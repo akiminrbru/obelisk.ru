@@ -1,91 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Главная</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<header class="zheader">
-			<div class="zheader__top">
-				<div class="zcontainer">
-					<div class="zheader__top-inner">
-						<a href="#" class="zheader__logo">
-							<img src="assets/img/logo.jpg" alt="Logo" />
-						</a>
-						<div class="zheader__info">
-							<div class="zheader__info-links">
-								<div class="zheader__location"><img src="assets/icons/location.svg" alt="Местоположение" /><span>Москва</span></div>
-								<a class="zheader__phone" href="tel:+7 (929) 999-99-99">+7 (929) 999-99-99</a>
-								<a class="zheader__mail" href="mailto:2668877@gmail.com">2668877@gmail.com</a>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Главная</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="swiper-bundle.min.css">
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<header class="zheader">
+		<div class="zheader__top">
+			<div class="zcontainer">
+				<div class="zheader__top-inner">
+					<a href="#" class="zheader__logo">
+						<img src="assets/img/logo.jpg" alt="Logo" />
+					</a>
+					<div class="zheader__info">
+						<div class="zheader__info-links">
+							<div class="zheader__location"><img src="assets/icons/location.svg"
+									alt="Местоположение" /><span>Москва</span></div>
+							<a class="zheader__phone" href="tel:+7 (929) 999-99-99">+7 (929) 999-99-99</a>
+							<a class="zheader__mail" href="mailto:2668877@gmail.com">2668877@gmail.com</a>
+						</div>
+						<button class="zheader__contactus">Связаться с нами</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="zheader__bot">
+			<div class="zcontainer">
+				<div class="zheader__bot-inner">
+					<div class="zheader__bot-left">
+						<nav class="zheader__nav">
+							<div class="zheader__catalog-btnWrap">
+								<a class="zheader__nav-catalog" href="#">Каталог</a>
+								<div class="zheader__nav-catalogImg">
+									<img src="assets/icons/arr-mobile-right.svg" alt="">
+								</div>
+								<div class="zheader__catalog">
+									<div class="zheader__catalog-btnBack">
+										<img src="assets/icons/arr-mobile-left.svg" alt="Назад">
+										<p>Назад / Каталог</p>
+									</div>
+									<ul class="zheader__catalog-links">
+										<li>
+											<a href="#">
+												Памятники
+												<img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Оформление памятников
+												<img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Цветник на могилу
+												<img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Цоколь
+												<img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Мемориальные комплексы
+												<img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Ограды
+												<img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Столики, лавочки
+												<img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Плитка тротуарная
+												<img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+											</a>
+										</li>
+									</ul>
+								</div>
 							</div>
-							<button class="zheader__contactus">Связаться с нами</button>
+							<ul class="zheader__nav-list">
+								<li><a class="zheader__nav-link" href="#">Оформление</a></li>
+								<li><a class="zheader__nav-link" href="#">Услуги</a></li>
+								<li><a class="zheader__nav-link" href="#">Информация</a></li>
+								<li><a class="zheader__nav-link" href="#">Наши работы</a></li>
+								<li><a class="zheader__nav-link" href="#">Контакты</a></li>
+							</ul>
+						</nav>
+						<button class="zheader__searchBtn"><img src="assets/icons/icon_search.svg"
+								alt="Иконка поиска" /></button>
+					</div>
+					<a href="#" class="zheader__cart">
+						<div class="zheader__cart-icon">
+							<img src="assets/icons/icon_cart.svg" alt="Иконка корзины" />
+						</div>
+						<span class="zheader__cart-text">Корзина</span>
+						<span class="zheader__cart-price">0 руб</span>
+					</a>
+					<div class="zheader__contactus-wrap">
+
+					</div>
+					<div class="zheader__social">
+						<a href="#"><img src="assets/icons/vk-mini.svg" alt="vk"></a>
+						<a href="#"><img src="assets/icons/telegram-mini.svg" alt="tg"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="zheader__under">
+			<div class="zcontainer">
+				<div class="zheader__under-inner">
+					<button class="zheader__menu-btn"></button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="zmain">
+		<div>
+			<section class="zmainBanner">
+				<div class="zcontainer">
+					<div class="zmainBanner__inner">
+						<div class="swiperBanner">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="zmainBanner__item">
+										<div class="zmainBanner__item-left">
+											<h2>Изготовление памятников для дорогих сердцу людей</h2>
+											<p>Любых масштабов с детальной проработкой</p>
+											<a href="#">Обсудить проект</a>
+										</div>
+										<div class="zmainBanner__item-right">
+											<img src="assets/img/banner1.png" alt="Картинка баннера">
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="zmainBanner__item">
+										<div class="zmainBanner__item-left">
+											<h2>Изготовление памятников для дорогих сердцу людей</h2>
+											<p>Любых масштабов с детальной проработкой</p>
+											<a href="#">Обсудить проект</a>
+										</div>
+										<div class="zmainBanner__item-right">
+											<img src="assets/img/banner1.png" alt="Картинка баннера">
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="zmainBanner__item">
+										<div class="zmainBanner__item-left">
+											<h2>Изготовление памятников для дорогих сердцу людей</h2>
+											<p>Любых масштабов с детальной проработкой</p>
+											<a href="#">Обсудить проект</a>
+										</div>
+										<div class="zmainBanner__item-right">
+											<img src="assets/img/banner1.png" alt="Картинка баннера">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination-banner"></div>
+							<div class="zmainBanner__buttons">
+								<div class="swiper-banner-prev">
+									<img src="assets/icons/banner-left.svg" alt="Стрелка влево">
+								</div>
+								<div class="zmainBanner__buttons-quantity">
+									<span class="current-slide"></span>/<span class="total-slides"></span>
+								</div>
+								<div class="swiper-banner-next">
+									<img src="assets/icons/banner-right.svg" alt="Стрелка вправо">
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="zheader__bot">
+			</section>
+			<section class="zmainAdvant">
 				<div class="zcontainer">
-					<div class="zheader__bot-inner">
-						<div class="zheader__bot-left">
-							<nav class="zheader__nav">
-								<ul class="zheader__nav-list">
-									<li><a class="zheader__nav-link" href="#">Каталог</a></li>
-									<li><a class="zheader__nav-link" href="#">Оформление</a></li>
-									<li><a class="zheader__nav-link" href="#">Услуги</a></li>
-									<li><a class="zheader__nav-link" href="#">Информация</a></li>
-									<li><a class="zheader__nav-link" href="#">Наши работы</a></li>
-									<li><a class="zheader__nav-link" href="#">Контакты</a></li>
-								</ul>
-							</nav>
-							<button class="zheader__searchBtn"><img src="assets/icons/icon_search.svg" alt="Иконка поиска" /></button>
+					<div class="zmainAdvant__inner">
+						<div class="zmainAdvant__item">
+							<h5>Гарантия лучшей цены</h5>
+							<p>Если вы найдете дешевле, мы снизим стоимость и сделаем специальное предложение</p>
 						</div>
-						<a href="#" class="zheader__cart">
-							<div class="zheader__cart-icon">
-								<img src="assets/icons/icon_cart.svg" alt="Иконка корзины" />
-							</div>
-							<span class="zheader__cart-price">0 руб</span>
-						</a>
+						<div class="zmainAdvant__line"></div>
+						<div class="zmainAdvant__item">
+							<h5>Гарантия лучшей цены</h5>
+							<p>Если вы найдете дешевле, мы снизим стоимость и сделаем специальное предложение</p>
+						</div>
+						<div class="zmainAdvant__line"></div>
+						<div class="zmainAdvant__item">
+							<h5>Гарантия лучшей цены</h5>
+							<p>Если вы найдете дешевле, мы снизим стоимость и сделаем специальное предложение</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="zheader__under">
-				<div class="zcontainer">
-					<div class="zheader__under-inner">
-						<button class="zheader__menu-btn"></button>
-					</div>
-				</div>
-			</div>
-		</header>
-		<section class="zmainBanner">
-			<div class="zcontainer">
-				<div class="zmainBanner__inner"></div>
-			</div>
-		</section>
-		<section class="zmainAdvant">
-			<div class="zcontainer">
-				<div class="zmainAdvant__inner">
-					<div class="zmainAdvant__item">
-						<h5>Гарантия лучшей цены</h5>
-						<p>Если вы найдете дешевле, мы снизим стоимость и сделаем специальное предложение</p>
-					</div>
-					<div class="zmainAdvant__line"></div>
-					<div class="zmainAdvant__item">
-						<h5>Гарантия лучшей цены</h5>
-						<p>Если вы найдете дешевле, мы снизим стоимость и сделаем специальное предложение</p>
-					</div>
-					<div class="zmainAdvant__line"></div>
-					<div class="zmainAdvant__item">
-						<h5>Гарантия лучшей цены</h5>
-						<p>Если вы найдете дешевле, мы снизим стоимость и сделаем специальное предложение</p>
-					</div>
-				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 		<section class="zmainPopular">
 			<div class="zcontainer">
 				<div class="zmainPopular__inner">
@@ -95,23 +225,33 @@
 					</div>
 					<div class="zmainPopular__list">
 						<div class="zmainPopular__item">
-							<a href="#"><h5>Памятники</h5></a>
+							<a href="#">
+								<h5>Памятники</h5>
+							</a>
 							<img src="assets/img/popular1.png" alt="Картинка товара" />
 						</div>
 						<div class="zmainPopular__item">
-							<a href="#"><h5>Ограды</h5></a>
+							<a href="#">
+								<h5>Ограды</h5>
+							</a>
 							<img src="assets/img/popular2.png" alt="Картинка товара" />
 						</div>
 						<div class="zmainPopular__item">
-							<a href="#"><h5>Комплексы</h5></a>
+							<a href="#">
+								<h5>Комплексы</h5>
+							</a>
 							<img src="assets/img/popular3.png" alt="Картинка товара" />
 						</div>
 						<div class="zmainPopular__item">
-							<a href="#"><h5>Столики и лавочки</h5></a>
+							<a href="#">
+								<h5>Столики и лавочки</h5>
+							</a>
 							<img src="assets/img/popular4.png" alt="Картинка товара" />
 						</div>
 						<div class="zmainPopular__item">
-							<a href="#"><h5>Цоколи</h5></a>
+							<a href="#">
+								<h5>Цоколи</h5>
+							</a>
 							<img src="assets/img/popular5.png" alt="Картинка товара" />
 						</div>
 					</div>
@@ -136,110 +276,463 @@
 			<div class="zcontainer">
 				<div class="zmainProducts__inner">
 					<h2 class="zgeneral__title">Памятники на могилу</h2>
-					<div class="zmainProducts__list">
-						<div class="zmainProducts__item">
-							<div class="zmainProducts__item-img">
-								<img src="assets/img/product1.jpg" alt="Картинка продукта" />
+					<div class="swiperProducts">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="zmainProducts__item">
+									<div class="zmainProducts__item-img">
+										<img src="assets/img/product1.jpg" alt="Картинка продукта" />
+									</div>
+									<div class="zmainProducts__item-content">
+										<div>
+											<h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА № 14329</h5>
+											<p class="zmainProducts__item-desc">Материал: гранитный камень</p>
+										</div>
+										<div>
+											<div class="zmainProducts__item-price">от <span>14 400</span> руб</div>
+											<a class="zmainProducts__item-link" href="#">Подробнее</a>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="zmainProducts__item-content">
-								<h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА № 14329</h5>
-								<p class="zmainProducts__item-desc">Материал: гранитный камень</p>
-								<div class="zmainProducts__item-price">от <span>14 400</span> руб</div>
-								<a class="zmainProducts__item-link" href="#">Подробнее</a>
+							<div class="swiper-slide">
+								<div class="zmainProducts__item">
+									<div class="zmainProducts__item-img">
+										<img src="assets/img/product1.jpg" alt="Картинка продукта" />
+									</div>
+									<div class="zmainProducts__item-content">
+										<div>
+											<h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА № 14329</h5>
+											<p class="zmainProducts__item-desc">Материал: гранитный камень</p>
+										</div>
+										<div>
+											<div class="zmainProducts__item-price">от <span>14 400</span> руб</div>
+											<a class="zmainProducts__item-link" href="#">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="zmainProducts__item">
+									<div class="zmainProducts__item-img">
+										<img src="assets/img/product2.jpg" alt="Картинка продукта" />
+									</div>
+									<div class="zmainProducts__item-content">
+										<div>
+											<h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА № 14329</h5>
+											<p class="zmainProducts__item-desc">Материал: гранитный камень</p>
+										</div>
+										<div>
+											<div class="zmainProducts__item-price">от <span>14 400</span> руб</div>
+											<a class="zmainProducts__item-link" href="#">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="zmainProducts__item">
+									<div class="zmainProducts__item-img">
+										<img src="assets/img/product2.jpg" alt="Картинка продукта" />
+									</div>
+									<div class="zmainProducts__item-content">
+										<div>
+											<h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА № 14329</h5>
+											<p class="zmainProducts__item-desc">Материал: гранитный камень</p>
+										</div>
+										<div>
+											<div class="zmainProducts__item-price">от <span>14 400</span> руб</div>
+											<a class="zmainProducts__item-link" href="#">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="zmainProducts__item">
+									<div class="zmainProducts__item-img">
+										<img src="assets/img/product2.jpg" alt="Картинка продукта" />
+									</div>
+									<div class="zmainProducts__item-content">
+										<div>
+											<h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА № 14329</h5>
+											<p class="zmainProducts__item-desc">Материал: гранитный камень</p>
+										</div>
+										<div>
+											<div class="zmainProducts__item-price">от <span>14 400</span> руб</div>
+											<a class="zmainProducts__item-link" href="#">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="zmainProducts__item">
+									<div class="zmainProducts__item-img">
+										<img src="assets/img/product2.jpg" alt="Картинка продукта" />
+									</div>
+									<div class="zmainProducts__item-content">
+										<div>
+											<h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА № 14329</h5>
+											<p class="zmainProducts__item-desc">Материал: гранитный камень</p>
+										</div>
+										<div>
+											<div class="zmainProducts__item-price">от <span>14 400</span> руб</div>
+											<a class="zmainProducts__item-link" href="#">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="zmainProducts__item">
+									<div class="zmainProducts__item-img">
+										<img src="assets/img/product2.jpg" alt="Картинка продукта" />
+									</div>
+									<div class="zmainProducts__item-content">
+										<div>
+											<h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА № 14329</h5>
+											<p class="zmainProducts__item-desc">Материал: гранитный камень</p>
+										</div>
+										<div>
+											<div class="zmainProducts__item-price">от <span>14 400</span> руб</div>
+											<a class="zmainProducts__item-link" href="#">Подробнее</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="zmainProducts__item">
+									<div class="zmainProducts__item-img">
+										<img src="assets/img/product2.jpg" alt="Картинка продукта" />
+									</div>
+									<div class="zmainProducts__item-content">
+										<div>
+											<h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА № 14329</h5>
+											<p class="zmainProducts__item-desc">Материал: гранитный камень</p>
+										</div>
+										<div>
+											<div class="zmainProducts__item-price">от <span>14 400</span> руб</div>
+											<a class="zmainProducts__item-link" href="#">Подробнее</a>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
+						<div class="swiper-pagination-products"></div>
 					</div>
 					<div class="zmainProducts__all"><a href="#">Смотреть все</a></div>
 				</div>
 			</div>
+			</div>
 		</section>
-		<footer class="zfooter">
-			<div class="zfooter__top">
-				<div class="zcontainer">
-					<div class="zfooter__top-inner">
-						<div class="zfooter__top-left">
-							<h2 class="zgeneral__title white">свяжитесь с нами удобным для вас способом</h2>
-							<ul class="zheader__top-info">
-								<li>
-									<span>Телефон</span>
-									<a href="tel:+7 (904) 618-38-59">+7 (904) 618-38-59</a>
-								</li>
-								<li>
-									<span>Время работы</span>
-									<p>Пн-Вс 9:00 - 21:00</p>
-								</li>
-								<li>
-									<span>Адрес</span>
-									<p>Москва, ул. Название, д. 8 пом. 13Н</p>
-								</li>
-								<li>
-									<span>Мессенджеры</span>
-									<div class="zheader__top-links">
-										<a href="#"><img src="assets/icons/vk.svg" alt="Иконка VK" /></a>
-										<a href="#"><img src="assets/icons/telegram.svg" alt="Иконка Telegram" /></a>
-									</div>
-								</li>
-							</ul>
+		<section class="zmainExample">
+			<div class="zcontainer">
+				<div class="zmainExample__inner">
+					<div class="zmainExample__panel">
+						<h2 class="zgeneral__title">примеры работ</h2>
+						<a class="zmainExample__all" href="#">Смотреть все</a>
+					</div>
+					<div class="swiperExample">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="zmainExample__item">
+									<img src="assets/img/example1.jpg" alt="Пример 1">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="zmainExample__item">
+									<img src="assets/img/example2.jpg" alt="Пример 1">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="zmainExample__item">
+									<img src="assets/img/example2.jpg" alt="Пример 1">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="zmainExample__item">
+									<img src="assets/img/example2.jpg" alt="Пример 1">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="zmainExample__item">
+									<img src="assets/img/example1.jpg" alt="Пример 1">
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="zmainExample__item">
+									<img src="assets/img/example2.jpg" alt="Пример 1">
+								</div>
+							</div>
 						</div>
-						<div class="zfooter__top-right">
-							<h3>форма обратного звонка</h3>
-							<form action="#">
-								<input name="name" type="text" placeholder="Ваше имя" />
-								<input name="phone" type="tel" placeholder="+7 (000) 000-00-00" />
-								<button>Отправить заявку</button>
-							</form>
-						</div>
+						<div class="swiper-pagination-example"></div>
 					</div>
 				</div>
 			</div>
-			<div class="zfooter__bot">
-				<div class="zcontainer">
-					<div class="zfooter__bot-inner">
-						<div class="zfooter__bot-left">
-							<a href="#" class="zfooter__logo">
-								<img src="assets/img/logo-footer.png" alt="Лого" />
-							</a>
-							<ul class="zfooter__dop">
-								<li>© Все права защищены 2019.</li>
-								<li><a href="#">Политика конфиденциальности</a></li>
-								<li><a href="#">Публичная оферта</a></li>
-							</ul>
+		</section>
+		<section class="zmainReviews">
+			<div class="zcontainer">
+				<div class="zmainReviews__inner">
+
+					<div class="zmainReviews__panel">
+						<h2 class="zgeneral__title">вот что о нас говорят</h2>
+						<a class="zmainReviews__all" href="#">Все отзывы</a>
+					</div>
+					<div class="zmainReviews__slider">
+						<div class="swiper-reviews-prev">
+							<img src="assets/icons/left.svg" alt="ArrowLeft">
 						</div>
-						<nav class="zfooter__bot-mid">
-							<ul class="zfooter__bot-links">
-								<li><a href="#">Каталог</a></li>
-								<li><a href="#">Памятники</a></li>
-								<li><a href="#">Мемориальные комплексы</a></li>
-								<li><a href="#">Оформление </a></li>
-								<li><a href="#">Благоустройство</a></li>
-							</ul>
-							<ul class="zfooter__bot-links">
-								<li><a href="#">Услуги</a></li>
-								<li><a href="#">Гравировка</a></li>
-								<li><a href="#">Доставка</a></li>
-								<li><a href="#">Установка</a></li>
-								<li><a href="#">Сервис</a></li>
-							</ul>
-							<ul class="zfooter__bot-links">
-								<li><a href="#">О компании</a></li>
-								<li><a href="#">Наши работы</a></li>
-								<li><a href="#">Гарантия</a></li>
-								<li><a href="#">Оплата</a></li>
-								<li><a href="#">Скидки</a></li>
-							</ul>
-						</nav>
-						<div class="zfooter__bot-right">
-							<a class="zfooter__phone" href="tel:+7 (904) 618-38-59">+7 (904) 618-38-59</a>
-							<a class="zfooter__mail" href="mailto:Info@Obelisk.ru">Info@Obelisk.ru</a>
-							<p class="zfooter__location">Москва, ул. Название, д. 8 пом. 13Н</p>
-							<div class="zfooter__bot-info">
-								<a href="#"> <img src="assets/icons/vk.svg" alt="VK" /> </a><a href="#"><img src="assets/icons/telegram.svg" alt="telegram" /></a>
+						<div class="swiperReviews">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="zmainReviews__item">
+										<img class="zmainReviews__item-quotes" src="assets/icons/quotes.svg"
+											alt="Кавычки">
+										<div class="zmainReviews__item-top">
+											<h5>Таира Руслановна</h5>
+											<span>Москва</span>
+											<p>Живу в другом городе и не могу часто посещать могилу. Менеджер Оксана
+												порекомендовала
+												установить мемориальный комплекс. Отличное решение – через него не
+												прорастает
+												сорная
+												трава, могила ухода не требует и не выглядит при этом заброшенной. Можно
+												не
+												думать
+												об уборке и побыть наедине со своими чувствами. Большое спасибо, очень
+												ценю
+												вашу
+												помощь и благодарна за отличную работу.</p>
+										</div>
+										<div class="zmainReviews__item-bot">
+											<img src="assets/img/review.jpg" alt="Картинка отзыва">
+											<img src="assets/img/review.jpg" alt="Картинка отзыва">
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="zmainReviews__item">
+										<img class="zmainReviews__item-quotes" src="assets/icons/quotes.svg"
+											alt="Кавычки">
+										<div class="zmainReviews__item-top">
+											<h5>Таира Руслановна</h5>
+											<span>Москва</span>
+											<p>Живу в другом городе и не могу часто посещать могилу. Менеджер Оксана
+												порекомендовала
+												установить мемориальный комплекс. Отличное решение – через него не
+												прорастает
+												сорная
+												трава, могила ухода не требует и не выглядит при этом заброшенной. Можно
+												не
+												думать
+												об уборке и побыть наедине со своими чувствами. Большое спасибо, очень
+												ценю
+												вашу
+												помощь и благодарна за отличную работу.</p>
+										</div>
+										<div class="zmainReviews__item-bot">
+											<img src="assets/img/review.jpg" alt="Картинка отзыва">
+											<img src="assets/img/review.jpg" alt="Картинка отзыва">
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="zmainReviews__item">
+										<img class="zmainReviews__item-quotes" src="assets/icons/quotes.svg"
+											alt="Кавычки">
+										<div class="zmainReviews__item-top">
+											<h5>Таира Руслановна</h5>
+											<span>Москва</span>
+											<p>Живу в другом городе и не могу часто посещать могилу. Менеджер Оксана
+												порекомендовала
+												установить мемориальный комплекс. Отличное решение – через него не
+												прорастает
+												сорная
+												трава, могила ухода не требует и не выглядит при этом заброшенной. Можно
+												не
+												думать
+												об уборке и побыть наедине со своими чувствами. Большое спасибо, очень
+												ценю
+												вашу
+												помощь и благодарна за отличную работу.</p>
+										</div>
+										<div class="zmainReviews__item-bot">
+											<img src="assets/img/review.jpg" alt="Картинка отзыва">
+											<img src="assets/img/review.jpg" alt="Картинка отзыва">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination-reviews"></div>
+						</div>
+						<div class="swiper-reviews-next"><img src="assets/icons/right.svg" alt="ArrowRight"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="zmainSale">
+			<div class="zcontainer">
+				<div class="zmainSale__inner">
+					<div class="zmainSale__left">
+						<div class="zmainSale__content">
+							<h2 class="zgeneral__title white">Получите скидку 15% на доставку и установку</h2>
+							<p>Оставьте заявку и мы закрепим за вами скидку</p>
+							<button>Оставить заявку</button>
+						</div>
+					</div>
+					<div class="zmainSale__right">
+						<img src="assets/img/sale.jpg" alt="Фото скидки" />
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="zmainInfo">
+			<div class="zcontainer">
+				<div class="zmainInfo__inner">
+					<div class="zmainInfo__top">
+						<div class="zmainInfo__top-left">
+							<div class="zmainInfo__logo">
+								<img src="assets/icons/logo.svg" alt="Лого">
+							</div>
+						</div>
+						<div class="zmainInfo__top-right">
+							<h2 class="zgeneral__title">Компания obelisk занимается изготовлением и установкой
+								памятников
+							</h2>
+							<div class="zmainInfo__text">
+								<p>
+									Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+									doloremque
+									laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+									architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+									voluptas
+									sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+									ratione
+									voluptatem sequi nesciunt. Neque porro quisquam est, qui
+								</p>
+								<p>
+									amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
+									ut
+									labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+									nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+									commodi
+									consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="zmainInfo__bot">
+						<div class="zmainInfo__link-wrap"><a class="zmainInfo__link" href="#">О компании</a></div>
+						<div class="zmainInfo__list">
+							<div class="zmainInfo__advant">
+								<p class="zmainInfo__advant-title">18 <span>лет</span></p>
+								<p class="zmainInfo__advant-desc">успешной работы</p>
+							</div>
+							<div class="zmainInfo__advant">
+								<p class="zmainInfo__advant-title">31</p>
+								<p class="zmainInfo__advant-desc">сотрудник в штате</p>
+							</div>
+							<div class="zmainInfo__advant">
+								<p class="zmainInfo__advant-title">120</p>
+								<p class="zmainInfo__advant-desc">памятников в наличии</p>
+							</div>
+							<div class="zmainInfo__advant">
+								<p class="zmainInfo__advant-title">1300</p>
+								<p class="zmainInfo__advant-desc">памятников установили</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</footer>
-		<script src="script.js"></script>
-	</body>
+		</section>
+	</main>
+	<footer class="zfooter">
+		<div class="zfooter__top">
+			<div class="zcontainer">
+				<div class="zfooter__top-inner">
+					<div class="zfooter__top-left">
+						<h2 class="zgeneral__title white">свяжитесь с нами удобным для вас способом</h2>
+						<ul class="zheader__top-info">
+							<li>
+								<span>Телефон</span>
+								<a href="tel:+7 (904) 618-38-59">+7 (904) 618-38-59</a>
+							</li>
+							<li>
+								<span>Время работы</span>
+								<p>Пн-Вс 9:00 - 21:00</p>
+							</li>
+							<li>
+								<span>Адрес</span>
+								<p>Москва, ул. Название, д. 8 пом. 13Н</p>
+							</li>
+							<li>
+								<span>Мессенджеры</span>
+								<div class="zheader__top-links">
+									<a href="#"><img src="assets/icons/vk.svg" alt="Иконка VK" /></a>
+									<a href="#"><img src="assets/icons/telegram.svg" alt="Иконка Telegram" /></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="zfooter__top-right">
+						<h3>форма обратного звонка</h3>
+						<form action="#">
+							<input name="name" type="text" placeholder="Ваше имя" />
+							<input name="phone" type="tel" placeholder="+7 (000) 000-00-00" />
+							<button>Отправить заявку</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="zfooter__bot">
+			<div class="zcontainer">
+				<div class="zfooter__bot-inner">
+					<div class="zfooter__bot-left">
+						<a href="#" class="zfooter__logo">
+							<img src="assets/img/logo-footer.png" alt="Лого" />
+						</a>
+						<ul class="zfooter__dop">
+							<li>© Все права защищены 2019.</li>
+							<li><a href="#">Политика конфиденциальности</a></li>
+							<li><a href="#">Публичная оферта</a></li>
+						</ul>
+					</div>
+					<nav class="zfooter__bot-mid">
+						<ul class="zfooter__bot-links">
+							<li><a href="#">Каталог</a></li>
+							<li><a href="#">Памятники</a></li>
+							<li><a href="#">Мемориальные комплексы</a></li>
+							<li><a href="#">Оформление </a></li>
+							<li><a href="#">Благоустройство</a></li>
+						</ul>
+						<ul class="zfooter__bot-links">
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Гравировка</a></li>
+							<li><a href="#">Доставка</a></li>
+							<li><a href="#">Установка</a></li>
+							<li><a href="#">Сервис</a></li>
+						</ul>
+						<ul class="zfooter__bot-links">
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Наши работы</a></li>
+							<li><a href="#">Гарантия</a></li>
+							<li><a href="#">Оплата</a></li>
+							<li><a href="#">Скидки</a></li>
+						</ul>
+					</nav>
+					<div class="zfooter__bot-right">
+						<a class="zfooter__phone" href="tel:+7 (904) 618-38-59">+7 (904) 618-38-59</a>
+						<a class="zfooter__mail" href="mailto:Info@Obelisk.ru">Info@Obelisk.ru</a>
+						<p class="zfooter__location">Москва, ул. Название, д. 8 пом. 13Н</p>
+						<div class="zfooter__bot-info">
+							<a href="#"> <img src="assets/icons/vk.svg" alt="VK" /> </a><a href="#"><img
+									src="assets/icons/telegram.svg" alt="telegram" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="swiper-bundle.min.js"></script>
+	<script src="script.js"></script>
+</body>
+
 </html>
