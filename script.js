@@ -8,16 +8,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('resize', () => {
         if (window.innerWidth <= 992) {
-            place.append(enter);
+            if (place) {
+                place.append(enter);
+            }
         } else {
-            back.append(enter);
+            if (back) {
+                back.append(enter);
+            }
         }
     });
 
     if (window.innerWidth <= 992) {
-        place.append(enter);
+        if (place) {
+            place.append(enter);
+        }
     } else {
-        back.append(enter);
+        if (back) {
+            back.append(enter);
+        }
     }
 
     // Перенос смотреть все в популярных котегориях
@@ -28,16 +36,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('resize', () => {
         if (window.innerWidth <= 576) {
-            place2.append(enter2);
+            place2?.append(enter2);
         } else {
-            back2.append(enter2);
+            back2?.append(enter2);
         }
     });
 
     if (window.innerWidth <= 576) {
-        place2.append(enter2);
+        place2?.append(enter2);
     } else {
-        back2.append(enter2);
+        back2?.append(enter2);
     }
 
     // SwiperProducts
@@ -89,16 +97,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('resize', () => {
         if (window.innerWidth <= 576) {
-            place3.append(enter3);
+            place3?.append(enter3);
         } else {
-            back3.append(enter3);
+            back3?.append(enter3);
         }
     });
 
     if (window.innerWidth <= 576) {
-        place3.append(enter3);
+        place3?.append(enter3);
     } else {
-        back3.append(enter3);
+        back3?.append(enter3);
     }
 
     // swiperReviews
@@ -129,16 +137,16 @@ document.addEventListener("DOMContentLoaded", () => {
     
         window.addEventListener('resize', () => {
             if (window.innerWidth <= 576) {
-                place4.append(enter4);
+                place4?.append(enter4);
             } else {
-                back4.append(enter4);
+                back4?.append(enter4);
             }
         });
     
         if (window.innerWidth <= 576) {
-            place4.append(enter4);
+            place4?.append(enter4);
         } else {
-            back4.append(enter4);
+            back4?.append(enter4);
         }
 
     // swiperBanner
@@ -174,8 +182,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
     if (swiperBanner) {
-        const totalSlides = document.querySelector('.swiper-wrapper').childElementCount;
-        document.querySelector('.total-slides').innerHTML = totalSlides
+        const swiperBanner_wrapper = document.querySelector('.swiperBanner .swiper-wrapper')
+        if (swiperBanner_wrapper) {
+            const totalSlides = swiperBanner_wrapper.childElementCount;  
+            if (totalSlides) {
+                document.querySelector('.total-slides').innerHTML = totalSlides;
+            }
+        }
     }
 
 
@@ -187,16 +200,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('resize', () => {
         if (window.innerWidth <= 992) {
-            place5.append(enter5);
+            place5?.append(enter5);
         } else {
-            back5.append(enter5);
+            back5?.append(enter5);
         }
     });
 
     if (window.innerWidth <= 992) {
-        place5.append(enter5);
+        place5?.append(enter5);
     } else {
-        back5.append(enter5);
+        back5?.append(enter5);
     }
 
 

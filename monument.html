@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Памятники</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="zheader">
+        <div class="zheader__top">
+            <div class="zcontainer">
+                <div class="zheader__top-inner">
+                    <a href="#" class="zheader__logo">
+                        <img src="assets/img/logo.jpg" alt="Logo" />
+                    </a>
+                    <div class="zheader__info">
+                        <div class="zheader__info-links">
+                            <div class="zheader__location"><img src="assets/icons/location.svg"
+                                    alt="Местоположение" /><span>Москва</span></div>
+                            <a class="zheader__phone" href="tel:+7 (929) 999-99-99">+7 (929) 999-99-99</a>
+                            <a class="zheader__mail" href="mailto:2668877@gmail.com">2668877@gmail.com</a>
+                        </div>
+                        <button class="zheader__contactus">Связаться с нами</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zheader__bot">
+            <div class="zcontainer">
+                <div class="zheader__bot-inner">
+                    <div class="zheader__bot-left">
+                        <nav class="zheader__nav">
+                            <div class="zheader__catalog-btnWrap">
+                                <a class="zheader__nav-catalog" href="#">Каталог</a>
+                                <div class="zheader__nav-catalogImg">
+                                    <img src="assets/icons/arr-mobile-right.svg" alt="">
+                                </div>
+                                <div class="zheader__catalog">
+                                    <div class="zheader__catalog-btnBack">
+                                        <img src="assets/icons/arr-mobile-left.svg" alt="Назад">
+                                        <p>Назад / Каталог</p>
+                                    </div>
+                                    <ul class="zheader__catalog-links">
+                                        <li>
+                                            <a href="#">
+                                                Памятники
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Оформление памятников
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Цветник на могилу
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Цоколь
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Мемориальные комплексы
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Ограды
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Столики, лавочки
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Плитка тротуарная
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <ul class="zheader__nav-list">
+                                <li><a class="zheader__nav-link" href="#">Оформление</a></li>
+                                <li><a class="zheader__nav-link" href="#">Услуги</a></li>
+                                <li><a class="zheader__nav-link" href="#">Информация</a></li>
+                                <li><a class="zheader__nav-link" href="#">Наши работы</a></li>
+                                <li><a class="zheader__nav-link" href="#">Контакты</a></li>
+                            </ul>
+                        </nav>
+                        <button class="zheader__searchBtn"><img src="assets/icons/icon_search.svg"
+                                alt="Иконка поиска" /></button>
+                    </div>
+                    <a href="#" class="zheader__cart">
+                        <div class="zheader__cart-icon">
+                            <img src="assets/icons/icon_cart.svg" alt="Иконка корзины" />
+                        </div>
+                        <span class="zheader__cart-text">Корзина</span>
+                        <span class="zheader__cart-price">0 руб</span>
+                    </a>
+                    <div class="zheader__contactus-wrap">
+
+                    </div>
+                    <div class="zheader__social">
+                        <a href="#"><img src="assets/icons/vk-mini.svg" alt="vk"></a>
+                        <a href="#"><img src="assets/icons/telegram-mini.svg" alt="tg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zheader__under">
+            <div class="zcontainer">
+                <div class="zheader__under-inner">
+                    <button class="zheader__menu-btn"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="zbreadcrumbs">
+        <div class="zcontainer">
+            <ul class="zbreadcrumbs__inner">
+                <li class="zbreadcrumbs__item"><a href="index.html">Главная</a></li>
+                <li class="zbreadcrumbs__item"><a href="index.html">Каталог</a></li>
+                <li class="zbreadcrumbs__item">Памятники</li>
+            </ul>
+        </div>
+    </div>
+    <main class="zsecondary">
+        <section class="zcatalogDetail">
+            <div class="zcontainer">
+                <div class="zcatalogDetail__inner">
+                    <h1 class="zgeneral__title">памятники</h1>
+                    <div></div>
+                    <div class="zcatalogDetail__list">
+                        <div class="zmainProducts">
+                            <div class="zmainProducts__inner">
+                                <div class="swiperProducts">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="zmainProducts__item">
+                                                <div class="zmainProducts__item-img">
+                                                    <img src="assets/img/product1.jpg" alt="Картинка продукта" />
+                                                </div>
+                                                <div class="zmainProducts__item-content">
+                                                    <div>
+                                                        <h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА №
+                                                            14329</h5>
+                                                        <p class="zmainProducts__item-desc">Материал: гранитный
+                                                            камень</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="zmainProducts__item-price">от <span>14
+                                                                400</span> руб</div>
+                                                        <a class="zmainProducts__item-link" href="#">Подробнее</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="zmainProducts__item">
+                                                <div class="zmainProducts__item-img">
+                                                    <img src="assets/img/product1.jpg" alt="Картинка продукта" />
+                                                </div>
+                                                <div class="zmainProducts__item-content">
+                                                    <div>
+                                                        <h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА №
+                                                            14329</h5>
+                                                        <p class="zmainProducts__item-desc">Материал: гранитный
+                                                            камень</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="zmainProducts__item-price">от <span>14
+                                                                400</span> руб</div>
+                                                        <a class="zmainProducts__item-link" href="#">Подробнее</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="zmainProducts__item">
+                                                <div class="zmainProducts__item-img">
+                                                    <img src="assets/img/product2.jpg" alt="Картинка продукта" />
+                                                </div>
+                                                <div class="zmainProducts__item-content">
+                                                    <div>
+                                                        <h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА №
+                                                            14329</h5>
+                                                        <p class="zmainProducts__item-desc">Материал: гранитный
+                                                            камень</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="zmainProducts__item-price">от <span>14
+                                                                400</span> руб</div>
+                                                        <a class="zmainProducts__item-link" href="#">Подробнее</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="zmainProducts__item">
+                                                <div class="zmainProducts__item-img">
+                                                    <img src="assets/img/product2.jpg" alt="Картинка продукта" />
+                                                </div>
+                                                <div class="zmainProducts__item-content">
+                                                    <div>
+                                                        <h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА №
+                                                            14329</h5>
+                                                        <p class="zmainProducts__item-desc">Материал: гранитный
+                                                            камень</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="zmainProducts__item-price">от <span>14
+                                                                400</span> руб</div>
+                                                        <a class="zmainProducts__item-link" href="#">Подробнее</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="zmainProducts__item">
+                                                <div class="zmainProducts__item-img">
+                                                    <img src="assets/img/product2.jpg" alt="Картинка продукта" />
+                                                </div>
+                                                <div class="zmainProducts__item-content">
+                                                    <div>
+                                                        <h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА №
+                                                            14329</h5>
+                                                        <p class="zmainProducts__item-desc">Материал: гранитный
+                                                            камень</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="zmainProducts__item-price">от <span>14
+                                                                400</span> руб</div>
+                                                        <a class="zmainProducts__item-link" href="#">Подробнее</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="zmainProducts__item">
+                                                <div class="zmainProducts__item-img">
+                                                    <img src="assets/img/product2.jpg" alt="Картинка продукта" />
+                                                </div>
+                                                <div class="zmainProducts__item-content">
+                                                    <div>
+                                                        <h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА №
+                                                            14329</h5>
+                                                        <p class="zmainProducts__item-desc">Материал: гранитный
+                                                            камень</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="zmainProducts__item-price">от <span>14
+                                                                400</span> руб</div>
+                                                        <a class="zmainProducts__item-link" href="#">Подробнее</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="zmainProducts__item">
+                                                <div class="zmainProducts__item-img">
+                                                    <img src="assets/img/product2.jpg" alt="Картинка продукта" />
+                                                </div>
+                                                <div class="zmainProducts__item-content">
+                                                    <div>
+                                                        <h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА №
+                                                            14329</h5>
+                                                        <p class="zmainProducts__item-desc">Материал: гранитный
+                                                            камень</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="zmainProducts__item-price">от <span>14
+                                                                400</span> руб</div>
+                                                        <a class="zmainProducts__item-link" href="#">Подробнее</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="zmainProducts__item">
+                                                <div class="zmainProducts__item-img">
+                                                    <img src="assets/img/product2.jpg" alt="Картинка продукта" />
+                                                </div>
+                                                <div class="zmainProducts__item-content">
+                                                    <div>
+                                                        <h5 class="zmainProducts__item-title">СКУЛЬПТУРА АНГЕЛА №
+                                                            14329</h5>
+                                                        <p class="zmainProducts__item-desc">Материал: гранитный
+                                                            камень</p>
+                                                    </div>
+                                                    <div>
+                                                        <div class="zmainProducts__item-price">от <span>14
+                                                                400</span> руб</div>
+                                                        <a class="zmainProducts__item-link" href="#">Подробнее</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination-products"></div>
+                                </div>
+                                <div class="zmainProducts__all"><a href="#">Смотреть все</a></div>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+        </div>
+        </div>
+        </section>
+        </div>
+        </div>
+        </div>
+        </section>
+        <section class="zmainSale">
+            <div class="zcontainer">
+                <div class="zmainSale__inner">
+                    <div class="zmainSale__left">
+                        <div class="zmainSale__content">
+                            <h2 class="zgeneral__title white">Получите скидку 15% на доставку и установку</h2>
+                            <p>Оставьте заявку и мы закрепим за вами скидку</p>
+                            <button>Оставить заявку</button>
+                        </div>
+                    </div>
+                    <div class="zmainSale__right">
+                        <img src="assets/img/sale.jpg" alt="Фото скидки" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="zmainInfo">
+            <div class="zcontainer">
+                <div class="zmainInfo__inner">
+                    <div class="zmainInfo__top">
+                        <div class="zmainInfo__top-left">
+                            <div class="zmainInfo__logo">
+                                <img src="assets/icons/logo.svg" alt="Лого">
+                            </div>
+                        </div>
+                        <div class="zmainInfo__top-right">
+                            <h2 class="zgeneral__title">Компания obelisk занимается изготовлением и установкой
+                                памятников
+                            </h2>
+                            <div class="zmainInfo__text">
+                                <p>
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas
+                                    sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+                                    ratione
+                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                                </p>
+                                <p>
+                                    amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
+                                    ut
+                                    labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+                                    nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi
+                                    consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zmainInfo__bot">
+                        <div class="zmainInfo__link-wrap"><a class="zmainInfo__link" href="#">О компании</a></div>
+                        <div class="zmainInfo__list">
+                            <div class="zmainInfo__advant">
+                                <p class="zmainInfo__advant-title">18 <span>лет</span></p>
+                                <p class="zmainInfo__advant-desc">успешной работы</p>
+                            </div>
+                            <div class="zmainInfo__advant">
+                                <p class="zmainInfo__advant-title">31</p>
+                                <p class="zmainInfo__advant-desc">сотрудник в штате</p>
+                            </div>
+                            <div class="zmainInfo__advant">
+                                <p class="zmainInfo__advant-title">120</p>
+                                <p class="zmainInfo__advant-desc">памятников в наличии</p>
+                            </div>
+                            <div class="zmainInfo__advant">
+                                <p class="zmainInfo__advant-title">1300</p>
+                                <p class="zmainInfo__advant-desc">памятников установили</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="zfooter">
+        <div class="zfooter__top">
+            <div class="zcontainer">
+                <div class="zfooter__top-inner">
+                    <div class="zfooter__top-left">
+                        <h2 class="zgeneral__title white">свяжитесь с нами удобным для вас способом</h2>
+                        <ul class="zheader__top-info">
+                            <li>
+                                <span>Телефон</span>
+                                <a href="tel:+7 (904) 618-38-59">+7 (904) 618-38-59</a>
+                            </li>
+                            <li>
+                                <span>Время работы</span>
+                                <p>Пн-Вс 9:00 - 21:00</p>
+                            </li>
+                            <li>
+                                <span>Адрес</span>
+                                <p>Москва, ул. Название, д. 8 пом. 13Н</p>
+                            </li>
+                            <li>
+                                <span>Мессенджеры</span>
+                                <div class="zheader__top-links">
+                                    <a href="#"><img src="assets/icons/vk.svg" alt="Иконка VK" /></a>
+                                    <a href="#"><img src="assets/icons/telegram.svg" alt="Иконка Telegram" /></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="zfooter__top-right">
+                        <h3>форма обратного звонка</h3>
+                        <form action="#">
+                            <input name="name" type="text" placeholder="Ваше имя" />
+                            <input name="phone" type="tel" placeholder="+7 (000) 000-00-00" />
+                            <button>Отправить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zfooter__bot">
+            <div class="zcontainer">
+                <div class="zfooter__bot-inner">
+                    <div class="zfooter__bot-left">
+                        <a href="#" class="zfooter__logo">
+                            <img src="assets/img/logo-footer.png" alt="Лого" />
+                        </a>
+                        <ul class="zfooter__dop">
+                            <li>© Все права защищены 2019.</li>
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                            <li><a href="#">Публичная оферта</a></li>
+                        </ul>
+                    </div>
+                    <nav class="zfooter__bot-mid">
+                        <ul class="zfooter__bot-links">
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Памятники</a></li>
+                            <li><a href="#">Мемориальные комплексы</a></li>
+                            <li><a href="#">Оформление </a></li>
+                            <li><a href="#">Благоустройство</a></li>
+                        </ul>
+                        <ul class="zfooter__bot-links">
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Гравировка</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Установка</a></li>
+                            <li><a href="#">Сервис</a></li>
+                        </ul>
+                        <ul class="zfooter__bot-links">
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Наши работы</a></li>
+                            <li><a href="#">Гарантия</a></li>
+                            <li><a href="#">Оплата</a></li>
+                            <li><a href="#">Скидки</a></li>
+                        </ul>
+                    </nav>
+                    <div class="zfooter__bot-right">
+                        <a class="zfooter__phone" href="tel:+7 (904) 618-38-59">+7 (904) 618-38-59</a>
+                        <a class="zfooter__mail" href="mailto:Info@Obelisk.ru">Info@Obelisk.ru</a>
+                        <p class="zfooter__location">Москва, ул. Название, д. 8 пом. 13Н</p>
+                        <div class="zfooter__bot-info">
+                            <a href="#"> <img src="assets/icons/vk.svg" alt="VK" /> </a><a href="#"><img
+                                    src="assets/icons/telegram.svg" alt="telegram" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
