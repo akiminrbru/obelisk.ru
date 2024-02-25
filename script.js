@@ -248,4 +248,35 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // FILTERS
+
+    let filter_panel = document.querySelectorAll('.zcatalogDetail__filter_panel');
+    if (filter_panel.length != 0) {
+        filter_panel.forEach((el) => {
+            el.addEventListener('click', (e) => {
+                let filter__inner = e.target.parentNode.querySelector('.zcatalogDetail__filter_inner');
+                let filter__arrow = e.target;
+
+                if (filter__arrow?.classList.contains('active')) {
+                    filter__arrow?.classList.remove('active');
+                } else {
+                    filter_panel.forEach((item) => {
+                        item?.classList.remove('active');
+                    });
+                    filter__arrow?.classList.add('active');
+                }
+
+                if (filter__inner?.classList.contains('active')) {
+                    filter__inner?.classList.remove('active');
+                } else {
+                    filter_panel.forEach((item) => {
+                        item?.parentNode.querySelector('.zcatalogDetail__filter_inner')?.classList.remove('active');
+                    });
+                    filter__inner.classList.add('active');
+                }
+            });
+        })
+    }
+
 });
+
