@@ -250,6 +250,7 @@ body.active::after {
     display: flex;
     align-items: center;
     gap: 30px;
+    position: relative;
 }
 
 .zheader__nav-list {
@@ -317,13 +318,47 @@ body.active::after {
         background-color: #A58865;
     }
 
+
+
     .zheader__under,
     .zheader__social,
     .zheader__cart-text,
     .zheader__contactus-wrap,
     .zheader__nav-catalogImg,
+    .zheader__catalog-btnBack,
     .zheader__catalog {
         display: none;
+    }
+
+    .zheader__catalog {
+        display: block;
+        position: absolute;
+        background-color: #fff;
+        top: 62px;
+    }
+
+    .zheader__catalog-links {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .zheader__catalog-links li a {
+        padding: 16px 25px;
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 135%;
+        color: #34322d;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .zheader__catalog-links li a:hover {
+        color: #b29470;
     }
 }
 
