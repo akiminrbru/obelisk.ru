@@ -278,5 +278,27 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     }
 
+    // Каталог десктоп
+
+    let desktop_catalog_btn = document.querySelector('.zheader__catalog-btnWrap');
+    let desktop_catalog = document.querySelector('.zheader__catalog');
+
+
+    console.log(desktop_catalog_btn)
+
+    desktop_catalog_btn?.addEventListener('mouseenter', () => {
+        let catalog = desktop_catalog_btn.querySelector(".zheader__catalog");
+        catalog.classList.add('active');
+    });
+
+    desktop_catalog_btn?.addEventListener('mouseleave', () => {
+        let catalog = desktop_catalog_btn.querySelector(".zheader__catalog");
+        catalog.classList.remove('active');
+    });
+
+    desktop_catalog?.addEventListener('mouseleave', () => {
+        desktop_catalog.classList.remove('active');
+    })
+
 });
 
