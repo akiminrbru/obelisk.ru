@@ -1665,8 +1665,8 @@ body.active::after {
 }
 
 .zmainProducts__item {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 300px 1fr;
     gap: 27px;
     padding: 5px;
     padding-bottom: 14px;
@@ -1678,7 +1678,6 @@ body.active::after {
 
 .zmainProducts__item-img {
     width: 100%;
-    height: 300px;
 }
 
 .zmainProducts__item-img img {
@@ -2602,6 +2601,18 @@ body.active::after {
     .zblog__inner {
         gap: 20px;
     }
+
+    .zblog__content a {
+        font-size: 16px;
+    }
+
+    .zblog__content p {
+        font-size: 14px;
+    }
+
+    .zblog__item {
+        grid-template-rows: 227px 1fr;
+    }
 }
 
 /* end zblog */
@@ -2870,7 +2881,26 @@ body.active::after {
     }
 
     .zservice__item a {
-        font-size: 22px;
+        font-size: 16px;
+    }
+
+    .zservice__item:nth-child(1) img {
+        width: auto;
+        height: 80%;
+    }
+
+    .zservice__item:nth-child(2) img {
+        width: 95%;
+        height: auto;
+    }
+
+    .zservice__item:nth-child(4) img {
+        width: auto;
+        height: 100%;
+    }
+
+    .zservice__list {
+        grid-template-rows: repeat(4, 223px);
     }
 }
 
@@ -2964,6 +2994,24 @@ body.active::after {
     color: #b29470;
 }
 
+.zcatalogDetail__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+    .zcatalogDetail__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .zcatalogDetail__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .zcatalogDetail__filter {
         gap: 20px;
@@ -2972,13 +3020,25 @@ body.active::after {
 
 @media screen and (max-width: 576px) {
     .zcatalogDetail__filter {
+        flex-wrap: wrap;
+        gap: 12px 40px;
+    }
+
+    .zcatalogDetail__list {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .zmainProducts__item {
+        max-width: 100%;
+        width: 100%;
     }
 }
 
 /* end zcatalogDetail */
-
 
 /* zcatalog */
 
@@ -3238,6 +3298,24 @@ body.active::after {
     .zcatalog__item:nth-child(1) a,
     .zcatalog__item:nth-child(18) a {
         font-size: 22px;
+    }
+
+    .zcatalog__inner {
+        gap: 16px;
+    }
+
+    .zcatalog__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .zcatalog__item {
+        height: 150px;
+    }
+
+    .zcatalog__item:nth-child(1),
+    .zcatalog__item:nth-child(18) {
+        height: 223px;
     }
 }
 
