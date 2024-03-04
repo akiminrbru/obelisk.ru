@@ -1,39 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     // Перенос доп ссылков в футуре
-
     let enter = document.querySelector('.zfooter__dop');
     let place = document.querySelector('.zfooter__bot-inner');
     let back = document.querySelector('.zfooter__bot-left');
-
     window.addEventListener('resize', () => {
         if (window.innerWidth <= 992) {
-            if (place) {
-                place.append(enter);
-            }
+            place?.append(enter);
         } else {
-            if (back) {
-                back.append(enter);
-            }
+            back?.append(enter);
         }
     });
-
     if (window.innerWidth <= 992) {
-        if (place) {
-            place.append(enter);
-        }
+        place?.append(enter);
     } else {
-        if (back) {
-            back.append(enter);
-        }
+        back?.append(enter);
     }
 
     // Перенос смотреть все в популярных котегориях
-
     let enter2 = document.querySelector('.zmainPopular__all');
     let place2 = document.querySelector('.zmainPopular__inner');
     let back2 = document.querySelector('.zmainPopular__panel');
-
     window.addEventListener('resize', () => {
         if (window.innerWidth <= 576) {
             place2?.append(enter2);
@@ -49,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // SwiperProducts
-
     const swiperProducts = new Swiper('.swiperProducts', {
         enabled: true,
         slidesPerView: 1,
@@ -66,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // SwiperExample
-
     const swiperExample = new Swiper('.swiperExample', {
         enabled: true,
         slidesPerView: 1,
@@ -81,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
             },
         },
     });
-
     window.addEventListener('resize', () => {
         if (window.innerWidth > 576) {
             swiperExample.slideTo(0);
@@ -90,7 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Перенос смотреть все в примерах
-
     let enter3 = document.querySelector('.zmainExample__all');
     let place3 = document.querySelector('.zmainExample__inner');
     let back3 = document.querySelector('.zmainExample__panel');
@@ -102,7 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
             back3?.append(enter3);
         }
     });
-
     if (window.innerWidth <= 576) {
         place3?.append(enter3);
     } else {
@@ -110,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // swiperReviews
-
     const swiperReviews = new Swiper('.swiperReviews', {
         slidesPerView: 1,
         spaceBetween: 20,
@@ -129,28 +109,26 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
-        // Перенос смотреть все в отзывах
+    // Перенос смотреть все в отзывах
 
-        let enter4 = document.querySelector('.zmainReviews__all');
-        let place4 = document.querySelector('.zmainReviews__inner');
-        let back4 = document.querySelector('.zmainReviews__panel');
+    let enter4 = document.querySelector('.zmainReviews__all');
+    let place4 = document.querySelector('.zmainReviews__inner');
+    let back4 = document.querySelector('.zmainReviews__panel');
     
-        window.addEventListener('resize', () => {
-            if (window.innerWidth <= 576) {
-                place4?.append(enter4);
-            } else {
-                back4?.append(enter4);
-            }
-        });
-    
+    window.addEventListener('resize', () => {
         if (window.innerWidth <= 576) {
             place4?.append(enter4);
         } else {
             back4?.append(enter4);
         }
+    });
+    if (window.innerWidth <= 576) {
+        place4?.append(enter4);
+    } else {
+        back4?.append(enter4);
+    }
 
     // swiperBanner
-
     const swiperBanner = new Swiper('.swiperBanner', {
         slidesPerView: "auto",
         spaceBetween: 300,
@@ -191,13 +169,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-
     // Перенос кнокпи связаться с нами
-
     let enter5 = document.querySelector('.zheader__contactus');
     let place5 = document.querySelector('.zheader__contactus-wrap');
     let back5 = document.querySelector('.zheader__info');
-
     window.addEventListener('resize', () => {
         if (window.innerWidth <= 992) {
             place5?.append(enter5);
@@ -212,14 +187,11 @@ document.addEventListener("DOMContentLoaded", () => {
         back5?.append(enter5);
     }
 
-
     // Бургер
-
     const burger_btn = document.querySelector('.zheader__menu-btn');
     const body_item = document.querySelector('body');
     const mobile_menu = document.querySelector('.zheader__bot');
     
-
     if (burger_btn) {
         burger_btn.addEventListener('click', (e) => {
             burger_btn.classList.toggle('active');
@@ -230,7 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Каталог 
-
     const catalog_back = document.querySelector('.zheader__catalog-btnBack');
     const catalog_open = document.querySelector('.zheader__nav-catalogImg');
     const catalog = document.querySelector('.zheader__catalog');
@@ -283,22 +254,31 @@ document.addEventListener("DOMContentLoaded", () => {
     let desktop_catalog_btn = document.querySelector('.zheader__catalog-btnWrap');
     let desktop_catalog = document.querySelector('.zheader__catalog');
 
-
-    console.log(desktop_catalog_btn)
-
     desktop_catalog_btn?.addEventListener('mouseenter', () => {
         let catalog = desktop_catalog_btn.querySelector(".zheader__catalog");
         catalog.classList.add('active');
     });
-
     desktop_catalog_btn?.addEventListener('mouseleave', () => {
         let catalog = desktop_catalog_btn.querySelector(".zheader__catalog");
         catalog.classList.remove('active');
     });
-
     desktop_catalog?.addEventListener('mouseleave', () => {
         desktop_catalog.classList.remove('active');
     })
+
+    // Свайпер на детальной карточки
+
+    const swiper = new Swiper('.swiperCardDetail', {
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination-cardDetail',
+        },
+        navigation: {
+          nextEl: '.swiper-cardDetail-next',
+          prevEl: '.swiper-cardDetail-prev',
+        },
+    });
 
 });
 

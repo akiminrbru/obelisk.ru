@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка товара</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="zheader">
+        <div class="zheader__top">
+            <div class="zcontainer">
+                <div class="zheader__top-inner">
+                    <a href="#" class="zheader__logo">
+                        <img src="assets/img/logo.jpg" alt="Logo" />
+                    </a>
+                    <div class="zheader__info">
+                        <div class="zheader__info-links">
+                            <div class="zheader__location"><img src="assets/icons/location.svg"
+                                    alt="Местоположение" /><span>Москва</span></div>
+                            <a class="zheader__phone" href="tel:+7 (929) 999-99-99">+7 (929) 999-99-99</a>
+                            <a class="zheader__mail" href="mailto:2668877@gmail.com">2668877@gmail.com</a>
+                        </div>
+                        <button class="zheader__contactus">Связаться с нами</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zheader__bot">
+            <div class="zcontainer">
+                <div class="zheader__bot-inner">
+                    <div class="zheader__bot-left">
+                        <nav class="zheader__nav">
+                            <div class="zheader__catalog-btnWrap">
+                                <a class="zheader__nav-catalog" href="#">Каталог</a>
+                                <div class="zheader__nav-catalogImg">
+                                    <img src="assets/icons/arr-mobile-right.svg" alt="">
+                                </div>
+                                <div class="zheader__catalog">
+                                    <div class="zheader__catalog-btnBack">
+                                        <img src="assets/icons/arr-mobile-left.svg" alt="Назад">
+                                        <p>Назад / Каталог</p>
+                                    </div>
+                                    <ul class="zheader__catalog-links">
+                                        <li>
+                                            <a href="#">
+                                                Памятники
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Оформление памятников
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Цветник на могилу
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Цоколь
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Мемориальные комплексы
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Ограды
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Столики, лавочки
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Плитка тротуарная
+                                                <img src="assets/icons/arr-mobile-right.svg" alt="Arrow right">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <ul class="zheader__nav-list">
+                                <li><a class="zheader__nav-link" href="#">Оформление</a></li>
+                                <li><a class="zheader__nav-link" href="#">Услуги</a></li>
+                                <li><a class="zheader__nav-link" href="#">Информация</a></li>
+                                <li><a class="zheader__nav-link" href="#">Наши работы</a></li>
+                                <li><a class="zheader__nav-link" href="#">Контакты</a></li>
+                            </ul>
+                        </nav>
+                        <button class="zheader__searchBtn"><img src="assets/icons/icon_search.svg"
+                                alt="Иконка поиска" /></button>
+                    </div>
+                    <a href="#" class="zheader__cart">
+                        <div class="zheader__cart-icon">
+                            <img src="assets/icons/icon_cart.svg" alt="Иконка корзины" />
+                        </div>
+                        <span class="zheader__cart-text">Корзина</span>
+                        <span class="zheader__cart-price">0 руб</span>
+                    </a>
+                    <div class="zheader__contactus-wrap">
+
+                    </div>
+                    <div class="zheader__social">
+                        <a href="#"><img src="assets/icons/vk-mini.svg" alt="vk"></a>
+                        <a href="#"><img src="assets/icons/telegram-mini.svg" alt="tg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zheader__under">
+            <div class="zcontainer">
+                <div class="zheader__under-inner">
+                    <button class="zheader__menu-btn"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="zbreadcrumbs">
+        <div class="zcontainer">
+            <ul class="zbreadcrumbs__inner">
+                <li class="zbreadcrumbs__item"><a href="index.html">Главная</a></li>
+                <li class="zbreadcrumbs__item"><a href="index.html">Каталог</a></li>
+                <li class="zbreadcrumbs__item"><a href="index.html">Памятники на могилу напрямую с завода</a></li>
+                <li class="zbreadcrumbs__item">Памятник на могилу № 10207</li>
+            </ul>
+        </div>
+    </div>
+    <main class="zcardDetail">
+        <div class="zcontainer">
+            <div class="zcardDetail__inner">
+                <h1 class="zgeneral__title">ПАМЯТНИК НА МОГИЛУ № 10207</h1>
+                <div class="zcardDetail__wrapper">
+                    <div class="zsecondary">
+                        <section class="zcardDetail__top">
+                            <div class="zcardDetail__content">
+                                <div class="zcardDetail__slider">
+                                    <div class="swiperCardDetail">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide"><img src="assets/img/cardDetail/cardDetail1.png"
+                                                    alt="cardDetail" loading="lazy"></div>
+                                            <div class="swiper-slide"><img src="assets/img/product1.jpg"
+                                                    alt="cardDetail" loading="lazy"></div>
+                                            <div class="swiper-slide"><img src="assets/img/product1.jpg"
+                                                    alt="cardDetail" loading="lazy"></div>
+                                        </div>
+                                        <div class="swiper-pagination-cardDetail"></div>
+                                        <div class="swiperCardDetail__buttons">
+                                            <div class="swiper-cardDetail-prev"><img
+                                                    src="assets/icons/card-arr-left.svg" alt="card-arr-left"></div>
+                                            <div class="swiper-cardDetail-next"><img
+                                                    src="assets/icons/card-arr-right.svg" alt="card-arr-right"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="zcardDetail__info">
+                                    <div class="zcardDetail__charact">
+                                        <h5 class="zcardDetail__charact_title">Характеристики</h5>
+                                        <div class="zcardDetail__charact_items">
+                                            <div class="zcardDetail__charact_item">
+                                                <div class="zcardDetail__charact_item_key"><span>Высота</span></div>
+                                                <div class="zcardDetail__charact_item_min"></div>
+                                                <div class="zcardDetail__charact_item_line"></div>
+                                                <div class="zcardDetail__charact_item_value"><span>с тумбой 92 см</span>
+                                                </div>
+                                            </div>
+                                            <div class="zcardDetail__charact_item">
+                                                <div class="zcardDetail__charact_item_key"><span>Вес комплекта</span>
+                                                </div>
+                                                <div class="zcardDetail__charact_item_min"></div>
+                                                <div class="zcardDetail__charact_item_line"></div>
+                                                <div class="zcardDetail__charact_item_value"><span>78 кг</span></div>
+                                            </div>
+                                            <div class="zcardDetail__charact_item">
+                                                <div class="zcardDetail__charact_item_key"><span>Параметры</span></div>
+                                                <div class="zcardDetail__charact_item_min"></div>
+                                                <div class="zcardDetail__charact_item_line"></div>
+                                                <div class="zcardDetail__charact_item_value"><span>
+                                                        Стела 80×40×5 см с тумбой
+                                                        12×50×15
+                                                    </span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="zcardDetail__advant">
+                                        <div class="zcardDetail__advant_item">
+                                            <img src="assets/icons/card-timer.svg" alt="timer">
+                                            <p>Изготовление от 3-х дней</p>
+                                        </div>
+                                        <div class="zcardDetail__advant_item">
+                                            <img src="assets/icons/card-garant.svg" alt="garant">
+                                            <p>Гарантия 30 лет</p>
+                                        </div>
+                                        <div class="zcardDetail__advant_item">
+                                            <img src="assets/icons/card-pay.svg" alt="pay">
+                                            <p>Картой или наличными с предоплатой от 30%</p>
+                                        </div>
+                                    </div>
+                                    <div class="zcardDetail__delivery">
+                                        <h5 class="zcardDetail__delivery_title">Доставка</h5>
+                                        <ul class="zcardDetail__delivery_list">
+                                            <li>Доставка по Москве и МО от 1 000 руб</li>
+                                            <li>Доставка по России — 1 000 руб
+                                                без учёта услуг ТК.</li>
+                                            <li>Возможен самовывоз со склада
+                                                в д. Семеново</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="zcardDetail__description">
+                            <h4>Описание</h4>
+                            <p>Классическая вертикальная стела выполнена в виде криволинейной трапеции. Ее прямолинейные
+                                боковые грани завершаются плавной дугой, напоминающей оду из веток параболы. Памятник
+                                такой формы универсален. Его можно заказать для женских и мужских могил, независимо от
+                                профессиональной деятельности и религиозной принадлежности похороненных в них людей.
+                                Обширная площадь лицевой грани позволит включить в оформление не только портрет и
+                                надпись, но и украсить ее декоративным орнаментом, цветком, траурным символом.</p>
+                        </section>
+                        <section class="zcardDetail__good">
+                            <div class="zcardDetail__good_top">
+                                <h3 class="zgeneral__subtitle">Благоустройство</h3>
+                                <p>Выберите товары, которые хотите добавить</p>
+                            </div>
+                            <ul class="zcardDetail__good_list">
+                                <li class="zcardDetail__good_item">
+                                    <input type="checkbox" id="good1">
+                                    <label for="good1" class="zcardDetail__good_item_content">
+                                        <div class="zcardDetail__good_item_checkbox"></div>
+                                        <div class="zcardDetail__good_item_img">
+                                            <img src="assets/img/cardDetail/good1.png" alt="good">
+                                        </div>
+                                        <div class="zcardDetail__good_item_right">
+                                            <div class="zcardDetail__good_item_text">
+                                                <p class="zcardDetail__good_item_title">Щебень мраморный 70001</p>
+                                                <div class="zcardDetail__good_item_icon">
+                                                    <img src="assets/icons/card-info.svg" alt="info">
+                                                </div>
+                                            </div>
+                                            <p class="zcardDetail__good_item_price">1 200 руб</p>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__good_item">
+                                    <input type="checkbox" id="good2">
+                                    <label for="good2" class="zcardDetail__good_item_content">
+                                        <div class="zcardDetail__good_item_checkbox"></div>
+                                        <div class="zcardDetail__good_item_img">
+                                            <img src="assets/img/cardDetail/good2.png" alt="good">
+                                        </div>
+                                        <div class="zcardDetail__good_item_right">
+                                            <div class="zcardDetail__good_item_text">
+                                                <p class="zcardDetail__good_item_title">Щебень мраморный 70001</p>
+                                                <div class="zcardDetail__good_item_icon">
+                                                    <img src="assets/icons/card-info.svg" alt="info">
+                                                </div>
+                                            </div>
+                                            <p class="zcardDetail__good_item_price">1 200 руб</p>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__good_item">
+                                    <input type="checkbox" id="good3">
+                                    <label for="good3" class="zcardDetail__good_item_content">
+                                        <div class="zcardDetail__good_item_checkbox"></div>
+                                        <div class="zcardDetail__good_item_img">
+                                            <img src="assets/img/cardDetail/good3.png" alt="good">
+                                        </div>
+                                        <div class="zcardDetail__good_item_right">
+                                            <div class="zcardDetail__good_item_text">
+                                                <p class="zcardDetail__good_item_title">Щебень мраморный 70001</p>
+                                                <div class="zcardDetail__good_item_icon">
+                                                    <img src="assets/icons/card-info.svg" alt="info">
+                                                </div>
+                                            </div>
+                                            <p class="zcardDetail__good_item_price">1 200 руб</p>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__good_item">
+                                    <input type="checkbox" id="good4">
+                                    <label for="good4" class="zcardDetail__good_item_content">
+                                        <div class="zcardDetail__good_item_checkbox"></div>
+                                        <div class="zcardDetail__good_item_img">
+                                            <img src="assets/img/cardDetail/good4.png" alt="good">
+                                        </div>
+                                        <div class="zcardDetail__good_item_right">
+                                            <div class="zcardDetail__good_item_text">
+                                                <p class="zcardDetail__good_item_title">Щебень мраморный 70001</p>
+                                                <div class="zcardDetail__good_item_icon">
+                                                    <img src="assets/icons/card-info.svg" alt="info">
+                                                </div>
+                                            </div>
+                                            <p class="zcardDetail__good_item_price">1 200 руб</p>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__good_item">
+                                    <input type="checkbox" id="good5">
+                                    <label for="good5" class="zcardDetail__good_item_content">
+                                        <div class="zcardDetail__good_item_checkbox"></div>
+                                        <div class="zcardDetail__good_item_img">
+                                            <img src="assets/img/cardDetail/good5.png" alt="good">
+                                        </div>
+                                        <div class="zcardDetail__good_item_right">
+                                            <div class="zcardDetail__good_item_text">
+                                                <p class="zcardDetail__good_item_title">Щебень мраморный 70001</p>
+                                                <div class="zcardDetail__good_item_icon">
+                                                    <img src="assets/icons/card-info.svg" alt="info">
+                                                </div>
+                                            </div>
+                                            <p class="zcardDetail__good_item_price">1 200 руб</p>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__good_item">
+                                    <input type="checkbox" id="good6">
+                                    <label for="good6" class="zcardDetail__good_item_content">
+                                        <div class="zcardDetail__good_item_checkbox"></div>
+                                        <div class="zcardDetail__good_item_img">
+                                            <img src="assets/img/cardDetail/good6.png" alt="good">
+                                        </div>
+                                        <div class="zcardDetail__good_item_right">
+                                            <div class="zcardDetail__good_item_text">
+                                                <p class="zcardDetail__good_item_title">Щебень мраморный 70001</p>
+                                                <div class="zcardDetail__good_item_icon">
+                                                    <img src="assets/icons/card-info.svg" alt="info">
+                                                </div>
+                                            </div>
+                                            <p class="zcardDetail__good_item_price">1 200 руб</p>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__good_item">
+                                    <input type="checkbox" id="good7">
+                                    <label for="good7" class="zcardDetail__good_item_content">
+                                        <div class="zcardDetail__good_item_checkbox"></div>
+                                        <div class="zcardDetail__good_item_img">
+                                            <img src="assets/img/cardDetail/good7.png" alt="good">
+                                        </div>
+                                        <div class="zcardDetail__good_item_right">
+                                            <div class="zcardDetail__good_item_text">
+                                                <p class="zcardDetail__good_item_title">Щебень мраморный 70001</p>
+                                                <div class="zcardDetail__good_item_icon">
+                                                    <img src="assets/icons/card-info.svg" alt="info">
+                                                </div>
+                                            </div>
+                                            <p class="zcardDetail__good_item_price">1 200 руб</p>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__good_item">
+                                    <input type="checkbox" id="good8">
+                                    <label for="good8" class="zcardDetail__good_item_content">
+                                        <div class="zcardDetail__good_item_checkbox"></div>
+                                        <div class="zcardDetail__good_item_img">
+                                            <img src="assets/img/cardDetail/good8.png" alt="good">
+                                        </div>
+                                        <div class="zcardDetail__good_item_right">
+                                            <div class="zcardDetail__good_item_text">
+                                                <p class="zcardDetail__good_item_title">Щебень мраморный 70001</p>
+                                                <div class="zcardDetail__good_item_icon">
+                                                    <img src="assets/icons/card-info.svg" alt="info">
+                                                </div>
+                                            </div>
+                                            <p class="zcardDetail__good_item_price">1 200 руб</p>
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                    <aside class="zcardDetail__sidebar">
+                        <div class="zcardDetail__sidebar_buy">
+                            <div class="zcardDetail__sidebar_buy_top">
+                                <div class="zcardDetail__sidebar_buy_price">
+                                    42 080 руб
+                                </div>
+                                <div class="zcardDetail__sidebar_buy_desc">
+                                    <div class="zcardDetail__sidebar_buy_desc_item">
+                                        <p>Стела 80×40×5 §см с тумбой 12×50×15</p>
+                                        <p>42 080 руб</p>
+                                    </div>
+                                    <div class="zcardDetail__sidebar_buy_desc_item">
+                                        <p>Полировка круговая</p>
+                                        <p>Бесплатно</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="zcardDetail__sidebar_buy_bot">
+                                <a class="zcardDetail__sidebar_buy_order" href="#">Заказать</a>
+                                <a class="zcardDetail__sidebar_buy_cart" href="#"><img src="assets/icons/card-cart.svg"
+                                        alt=""><span>В корзину</span></a>
+                                <p class="zcardDetail__sidebar_buy_bot_text">Цены и наличие товара уточняйте у менеджера
+                                </p>
+                            </div>
+                        </div>
+                        <div class="zcardDetail__sidebar_material">
+                            <h5 class="zcardDetail__sidebar_material_title">Выберите материал:</h5>
+                            <ul class="zcardDetail__sidebar_material_list">
+                                <li class="zcardDetail__sidebar_material_item">
+                                    <input type="radio" id="material1" name="material" value="material1" checked />
+                                    <label for="material1">
+                                        <img src="assets/img/cardDetail/color1.png" alt="color">
+                                        <div class="zcardDetail__sidebar_material_item_pop">
+                                            <div class="zcardDetail__sidebar_material_item_popleft"><img
+                                                    src="assets/img/cardDetail/color1.png" alt="color"></div>
+                                            <div class="zcardDetail__sidebar_material_item_popright">
+                                                <h5>Карельский Габбро Диабаз</h5>
+                                                <p>Карельский гранит Габбро Диабаз - классический насыщенный черный
+                                                    цвет, зеркальный блеск, универсальный камень для изготовления
+                                                    памятников. </p>
+                                            </div>
+                                            <div class="zcardDetail__sidebar_material_item_popsquareWrap">
+                                                <div class="zcardDetail__sidebar_material_item_popsquare"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__sidebar_material_item">
+                                    <input type="radio" id="material2" name="material" value="material2" />
+                                    <label for="material2">
+                                        <img src="assets/img/cardDetail/color2.png" alt="color">
+                                        <div class="zcardDetail__sidebar_material_item_pop">
+                                            <div class="zcardDetail__sidebar_material_item_popleft"><img
+                                                    src="assets/img/cardDetail/color2.png" alt="color"></div>
+                                            <div class="zcardDetail__sidebar_material_item_popright">
+                                                <h5>Цветок Урала</h5>
+                                                <p>Карельский гранит Габбро Диабаз - классический насыщенный черный
+                                                    цвет, зеркальный блеск, универсальный камень для изготовления
+                                                    памятников.</p>
+                                            </div>
+                                            <div class="zcardDetail__sidebar_material_item_popsquareWrap">
+                                                <div class="zcardDetail__sidebar_material_item_popsquare"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__sidebar_material_item">
+                                    <input type="radio" id="material3" name="material" value="material3" />
+                                    <label for="material3">
+                                        <img src="assets/img/cardDetail/color3.png" alt="color">
+                                        <div class="zcardDetail__sidebar_material_item_pop">
+                                            <div class="zcardDetail__sidebar_material_item_popleft"><img
+                                                    src="assets/img/cardDetail/color3.png" alt="color"></div>
+                                            <div class="zcardDetail__sidebar_material_item_popright">
+                                                <h5>Дымовский</h5>
+                                                <p>Цвет от темно-серого с красными вкраплениями, до коричневого.
+                                                    Сочетается с бронзой, темными видами гранита.</p>
+                                            </div>
+                                            <div class="zcardDetail__sidebar_material_item_popsquareWrap">
+                                                <div class="zcardDetail__sidebar_material_item_popsquare"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__sidebar_material_item">
+                                    <input type="radio" id="material4" name="material" value="material4" />
+                                    <label for="material4">
+                                        <img src="assets/img/cardDetail/color4.png" alt="color">
+                                        <div class="zcardDetail__sidebar_material_item_pop">
+                                            <div class="zcardDetail__sidebar_material_item_popleft"><img
+                                                    src="assets/img/cardDetail/color4.png" alt="color"></div>
+                                            <div class="zcardDetail__sidebar_material_item_popright">
+                                                <h5>Мансуровский</h5>
+                                                <p>Цвет однородный, светло-серого цвета, ближе к белому. Портреты
+                                                    наносят на керамику или темные виды гранита. </p>
+                                            </div>
+                                            <div class="zcardDetail__sidebar_material_item_popsquareWrap">
+                                                <div class="zcardDetail__sidebar_material_item_popsquare"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__sidebar_material_item">
+                                    <input type="radio" id="material5" name="material" value="material5" />
+                                    <label for="material5">
+                                        <img src="assets/img/cardDetail/color5.png" alt="color">
+                                        <div class="zcardDetail__sidebar_material_item_pop">
+                                            <div class="zcardDetail__sidebar_material_item_popleft"><img
+                                                    src="assets/img/cardDetail/color5.png" alt="color"></div>
+                                            <div class="zcardDetail__sidebar_material_item_popright">
+                                                <h5>Сопка Бунтина</h5>
+                                                <p>Черный цвет с темно-зелеными включениями. Надписи на памятниках
+                                                    получаются четкими. Камень не портретный.</p>
+                                            </div>
+                                            <div class="zcardDetail__sidebar_material_item_popsquareWrap">
+                                                <div class="zcardDetail__sidebar_material_item_popsquare"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__sidebar_material_item">
+                                    <input type="radio" id="material6" name="material" value="material6" />
+                                    <label for="material6">
+                                        <img src="assets/img/cardDetail/color6.png" alt="color">
+                                        <div class="zcardDetail__sidebar_material_item_pop">
+                                            <div class="zcardDetail__sidebar_material_item_popleft"><img
+                                                    src="assets/img/cardDetail/color6.png" alt="color"></div>
+                                            <div class="zcardDetail__sidebar_material_item_popright">
+                                                <h5>Лезниковский</h5>
+                                                <p>Красный цвет с оттенками от светло-бордового до темно-красного.
+                                                    Гранит безупречен для изготовления памятников.</p>
+                                            </div>
+                                            <div class="zcardDetail__sidebar_material_item_popsquareWrap">
+                                                <div class="zcardDetail__sidebar_material_item_popsquare"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__sidebar_material_item">
+                                    <input type="radio" id="material7" name="material" value="material7" />
+                                    <label for="material7">
+                                        <img src="assets/img/cardDetail/color7.png" alt="color">
+                                        <div class="zcardDetail__sidebar_material_item_pop">
+                                            <div class="zcardDetail__sidebar_material_item_popleft"><img
+                                                    src="assets/img/cardDetail/color7.png" alt="color"></div>
+                                            <div class="zcardDetail__sidebar_material_item_popright">
+                                                <h5>Лабрадорит</h5>
+                                                <p>Камень черного цвета с темно-зелеными или темно-синими включениями и
+                                                    перламутровым отливом. Портреты переносят на темный однородный фон.
+                                                </p>
+                                            </div>
+                                            <div class="zcardDetail__sidebar_material_item_popsquareWrap">
+                                                <div class="zcardDetail__sidebar_material_item_popsquare"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__sidebar_material_item">
+                                    <input type="radio" id="material8" name="material" value="material8" />
+                                    <label for="material8">
+                                        <img src="assets/img/cardDetail/color8.png" alt="color">
+                                        <div class="zcardDetail__sidebar_material_item_pop">
+                                            <div class="zcardDetail__sidebar_material_item_popleft"><img
+                                                    src="assets/img/cardDetail/color8.png" alt="color"></div>
+                                            <div class="zcardDetail__sidebar_material_item_popright">
+                                                <h5>Змеевик</h5>
+                                                <p>Является разновидностью серпентина зеленого оттенка от
+                                                    темно-изумрудного до желтого. Допускается гравировка портрета и
+                                                    надписей.
+                                                </p>
+                                            </div>
+                                            <div class="zcardDetail__sidebar_material_item_popsquareWrap">
+                                                <div class="zcardDetail__sidebar_material_item_popsquare"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__sidebar_material_item">
+                                    <input type="radio" id="material9" name="material" value="material9" />
+                                    <label for="material9">
+                                        <img src="assets/img/cardDetail/color9.png" alt="color">
+                                        <div class="zcardDetail__sidebar_material_item_pop">
+                                            <div class="zcardDetail__sidebar_material_item_popleft"><img
+                                                    src="assets/img/cardDetail/color9.png" alt="color"></div>
+                                            <div class="zcardDetail__sidebar_material_item_popright">
+                                                <h5>Возрождение</h5>
+                                                <p>Гранит монохромный, розово-серый цвет. Портрет на камне не делается,
+                                                    используется керамика или вставка из темного гранита.
+                                                </p>
+                                            </div>
+                                            <div class="zcardDetail__sidebar_material_item_popsquareWrap">
+                                                <div class="zcardDetail__sidebar_material_item_popsquare"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__sidebar_material_item">
+                                    <input type="radio" id="material10" name="material" value="material10" />
+                                    <label for="material10">
+                                        <img src="assets/img/cardDetail/color10.png" alt="color">
+                                        <div class="zcardDetail__sidebar_material_item_pop">
+                                            <div class="zcardDetail__sidebar_material_item_popleft"><img
+                                                    src="assets/img/cardDetail/color10.png" alt="color"></div>
+                                            <div class="zcardDetail__sidebar_material_item_popright">
+                                                <h5>Куртинский</h5>
+                                                <p>Куртинский гранит - элегантный бежевый оттенок камня. Подходит
+                                                    фотокерамика, стекло, гравировка пескоструй и скарпель.
+                                                </p>
+                                            </div>
+                                            <div class="zcardDetail__sidebar_material_item_popsquareWrap">
+                                                <div class="zcardDetail__sidebar_material_item_popsquare"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                            <p class="zcardDetail__sidebar_material_all">Все цвета</p>
+                        </div>
+                        <div class="zcardDetail__sidebar_size">
+                            <h5 class="zcardDetail__sidebar_size_title">Выберите размер стелы</h5>
+                            <div class="zcardDetail__sidebar_size_selector">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="zfooter">
+        <div class="zfooter__top">
+            <div class="zcontainer">
+                <div class="zfooter__top-inner">
+                    <div class="zfooter__top-left">
+                        <h2 class="zgeneral__title white">свяжитесь с нами удобным для вас способом</h2>
+                        <ul class="zheader__top-info">
+                            <li>
+                                <span>Телефон</span>
+                                <a href="tel:+7 (904) 618-38-59">+7 (904) 618-38-59</a>
+                            </li>
+                            <li>
+                                <span>Время работы</span>
+                                <p>Пн-Вс 9:00 - 21:00</p>
+                            </li>
+                            <li>
+                                <span>Адрес</span>
+                                <p>Москва, ул. Название, д. 8 пом. 13Н</p>
+                            </li>
+                            <li>
+                                <span>Мессенджеры</span>
+                                <div class="zheader__top-links">
+                                    <a href="#"><img src="assets/icons/vk.svg" alt="Иконка VK" /></a>
+                                    <a href="#"><img src="assets/icons/telegram.svg" alt="Иконка Telegram" /></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="zfooter__top-right">
+                        <h3>форма обратного звонка</h3>
+                        <form action="#">
+                            <input name="name" type="text" placeholder="Ваше имя" />
+                            <input name="phone" type="tel" placeholder="+7 (000) 000-00-00" />
+                            <button>Отправить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zfooter__bot">
+            <div class="zcontainer">
+                <div class="zfooter__bot-inner">
+                    <div class="zfooter__bot-left">
+                        <a href="#" class="zfooter__logo">
+                            <img src="assets/img/logo-footer.png" alt="Лого" />
+                        </a>
+                        <ul class="zfooter__dop">
+                            <li>© Все права защищены 2019.</li>
+                            <li><a href="#">Политика конфиденциальности</a></li>
+                            <li><a href="#">Публичная оферта</a></li>
+                        </ul>
+                    </div>
+                    <nav class="zfooter__bot-mid">
+                        <ul class="zfooter__bot-links">
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Памятники</a></li>
+                            <li><a href="#">Мемориальные комплексы</a></li>
+                            <li><a href="#">Оформление </a></li>
+                            <li><a href="#">Благоустройство</a></li>
+                        </ul>
+                        <ul class="zfooter__bot-links">
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Гравировка</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Установка</a></li>
+                            <li><a href="#">Сервис</a></li>
+                        </ul>
+                        <ul class="zfooter__bot-links">
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Наши работы</a></li>
+                            <li><a href="#">Гарантия</a></li>
+                            <li><a href="#">Оплата</a></li>
+                            <li><a href="#">Скидки</a></li>
+                        </ul>
+                    </nav>
+                    <div class="zfooter__bot-right">
+                        <a class="zfooter__phone" href="tel:+7 (904) 618-38-59">+7 (904) 618-38-59</a>
+                        <a class="zfooter__mail" href="mailto:Info@Obelisk.ru">Info@Obelisk.ru</a>
+                        <p class="zfooter__location">Москва, ул. Название, д. 8 пом. 13Н</p>
+                        <div class="zfooter__bot-info">
+                            <a href="#"> <img src="assets/icons/vk.svg" alt="VK" /> </a><a href="#"><img
+                                    src="assets/icons/telegram.svg" alt="telegram" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
