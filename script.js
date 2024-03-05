@@ -271,6 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const swiper = new Swiper('.swiperCardDetail', {
         direction: 'horizontal',
         loop: true,
+        spaceBetween: 20,
         pagination: {
           el: '.swiper-pagination-cardDetail',
         },
@@ -279,6 +280,114 @@ document.addEventListener("DOMContentLoaded", () => {
           prevEl: '.swiper-cardDetail-prev',
         },
     });
+    
+    // Выбор материала
+    let btn_all_color = document.querySelector('.zcardDetail__sidebar_material_all');
+    let color_list = document.querySelector('.zcardDetail__sidebar_material_list');
+
+    btn_all_color?.addEventListener('click', (e) => {
+        color_list?.classList.toggle('active');
+        btn_all_color?.classList.toggle('active');
+    });
+
+    // Выбор размера материала
+
+    let btn_openSelector = document.querySelector('.zcardDetail__sidebar_size_selector_default');
+    let selector_list = document.querySelector('.zcardDetail__sidebar_size_selector_items');
+    let selector_items = document.querySelectorAll('.zcardDetail__sidebar_size_selector_item');
+
+    let selector_item_array = [];
+    if (selector_items) {
+        selector_item_array = Array.from(selector_items);
+    }
+
+    btn_openSelector?.addEventListener('click', () => {
+        btn_openSelector?.classList.toggle('active');
+        selector_list?.classList.toggle('active');
+    });
+
+    selector_item_array?.map((elem) => {
+        elem?.querySelector('label')?.addEventListener('click', (e) => {
+            selector_list?.classList.remove('active');
+            btn_openSelector?.classList.remove('active');
+
+            let item =e.target?.parentNode;
+            let text = e.target.textContent;
+            let value = e.target?.parentNode?.querySelector('input')?.value;
+            let default_text = btn_openSelector?.querySelector('label span');
+            let default_value = btn_openSelector?.querySelector('input');
+            default_text.textContent = text;
+            default_value.value = value;
+            selector_item_array?.map((el) => el.classList.remove('active'));
+            item?.classList.add('active');
+        });
+    });
+
+    // Кнопка добавить в корзину
+    let btn_add_cart = document.querySelector('.zcardDetail__sidebar_buy_cart');
+
+    btn_add_cart?.addEventListener('click', () => {
+        btn_add_cart?.classList.toggle('active');
+        if (btn_add_cart?.classList.contains('active')) {
+            btn_add_cart.querySelector('span').textContent = "Добавлено в корзину";
+        } else {
+            btn_add_cart.querySelector('span').textContent = "В корзину";
+        }        
+    });
+
+    // Перенос описания на карточке товара     
+    let enter8 = document.querySelector('.zcardDetail__description');
+    let place8 = document.querySelector('.zcardDetail__another');
+    let back8 = document.querySelector('.zcardDetail__content');
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 768) {
+            place8?.prepend(enter8);
+        } else {
+            back8?.append(enter8);
+        }
+     });
+ 
+    if (window.innerWidth <= 768) {
+        place8?.prepend(enter8);
+    } else {
+        back8?.append(enter8);
+    }
+
+    // Перенос характеристик на карточке товара     
+    let enter6 = document.querySelector('.zcardDetail__info');
+    let place6 = document.querySelector('.zcardDetail__another');
+    let back6 = document.querySelector('.zcardDetail__content');
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 768) {
+            place6?.prepend(enter6);
+        } else {
+            back6?.append(enter6);
+        }
+     });
+ 
+    if (window.innerWidth <= 768) {
+        place6?.prepend(enter6);
+    } else {
+        back6?.append(enter6);
+    }
+
+    // Перенос sidebar на карточке товара     
+    let enter7 = document.querySelector('.zcardDetail__sidebar');
+    let place7 = document.querySelector('.zcardDetail__content');
+    let back7 = document.querySelector('.zcardDetail__wrapper');
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 768) {
+            place7?.append(enter7);
+        } else {
+            back7?.append(enter7);
+        }
+     });
+ 
+    if (window.innerWidth <= 768) {
+        place7?.append(enter7);
+    } else {
+        back7?.append(enter7);
+    }
 
 });
 
