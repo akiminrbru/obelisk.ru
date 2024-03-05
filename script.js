@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         breakpoints: {
         577: {
             enabled: false,
+            slideTo: 0,
             spaceBetween: 0,
         },
         },
@@ -67,8 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     window.addEventListener('resize', () => {
         if (window.innerWidth > 576) {
-            swiperExample.slideTo(0);
-            swiperProducts.slideTo(0);
+            // swiperExample.slideTo(0);
+            // swiperProducts.slideTo(0);
         } 
     });
 
@@ -284,10 +285,31 @@ document.addEventListener("DOMContentLoaded", () => {
     // Выбор материала
     let btn_all_color = document.querySelector('.zcardDetail__sidebar_material_all');
     let color_list = document.querySelector('.zcardDetail__sidebar_material_list');
+    let color_items = document.querySelectorAll('.zcardDetail__sidebar_material_item');
+    let color_info = document.querySelector('.zcardDetail__sidebar_material_info');
+    
+    let color_items_array = [];
+
+    if (color_items) {
+        color_items_array = Array.from(color_items);
+    }
 
     btn_all_color?.addEventListener('click', (e) => {
         color_list?.classList.toggle('active');
         btn_all_color?.classList.toggle('active');
+    });
+
+    color_items_array?.map((el) => {
+        let color_input = el?.querySelector('input');
+        let color_text = el?.querySelector('.zcardDetail__sidebar_material_item_title').textContent;
+        if (color_input.checked) {
+            color_info.querySelector('span').textContent = color_text;
+        }
+        el?.addEventListener('click', () => {
+            if (color_input.checked) {
+                color_info.querySelector('span').textContent = color_text;
+            }
+        });
     });
 
     // Выбор размера материала
@@ -338,19 +360,19 @@ document.addEventListener("DOMContentLoaded", () => {
     // Перенос описания на карточке товара     
     let enter8 = document.querySelector('.zcardDetail__description');
     let place8 = document.querySelector('.zcardDetail__another');
-    let back8 = document.querySelector('.zcardDetail__content');
+    let back8 = document.querySelector('.zcardDetail__another');
     window.addEventListener('resize', () => {
         if (window.innerWidth <= 768) {
             place8?.prepend(enter8);
         } else {
-            back8?.append(enter8);
+            back8?.before(enter8);
         }
      });
  
     if (window.innerWidth <= 768) {
         place8?.prepend(enter8);
     } else {
-        back8?.append(enter8);
+        back8?.before(enter8);
     }
 
     // Перенос характеристик на карточке товара     

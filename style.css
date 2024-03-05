@@ -3358,7 +3358,7 @@ body.active::after {
 
 .zcardDetail {
     background-color: var(--fon);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .zcardDetail__inner {
@@ -3684,6 +3684,9 @@ body.active::after {
 }
 
 .zcardDetail__sidebar_buy {
+    position: sticky;
+    top: 153px;
+    z-index: 2;
     padding: 30px;
     border: 1px solid #e8e8e8;
     border-radius: 3px;
@@ -3946,6 +3949,17 @@ body.active::after {
     visibility: visible;
 }
 
+.zcardDetail__sidebar_material_info p {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 135%;
+    color: var(--text);
+}
+
+.zcardDetail__sidebar_material_info p span {
+    font-weight: 400;
+}
+
 .zcardDetail__sidebar_size {
     padding: 25px 30px;
     border: 1px solid #e8e8e8;
@@ -4151,9 +4165,9 @@ body.active::after {
         grid-template-columns: 430px 1fr;
     }
 
-    .zcardDetail__slider {
+    /* .zcardDetail__slider {
         aspect-ratio: 1/1;
-    }
+    } */
 }
 
 
@@ -4403,9 +4417,18 @@ body.active::after {
     .swiper-pagination-cardDetail .swiper-pagination-bullet-active {
         background-color: var(--akcent);
     }
+
+    .zcardDetail__sidebar_material_item_pop {
+        display: none;
+    }
+
 }
 
 @media screen and (min-width: 577px) {
+    .zcardDetail__sidebar_material_info {
+        display: none;
+    }
+
     .swiper-pagination-cardDetail {
         display: none;
     }
