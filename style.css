@@ -6,6 +6,10 @@
     --dop-cvet-fona: #738287;
 }
 
+#reviews:target {
+    scroll-margin-top: 160px;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -2710,6 +2714,8 @@ body.active::after {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: sticky;
+    top: 153px;
 }
 
 .zblogDetail__box_title {
@@ -4441,3 +4447,62 @@ body.active::after {
 }
 
 /* end zcardDetail */
+
+
+/* zserviceDetail */
+
+.zserviceDetail {
+    background-color: var(--fon);
+}
+
+.zserviceDetail__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-bottom: 90px;
+}
+
+.zserviceDetail__box {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+}
+
+.zserviceDetail__image {
+    width: 100%;
+    height: 442px;
+    margin-bottom: 30px;
+}
+
+.zserviceDetail__image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.zserviceDetail__tags {
+    display: flex;
+    gap: 8px;
+    list-style-type: none;
+    margin-bottom: 40px;
+}
+
+
+.zserviceDetail__tag a {
+    display: block;
+    border: 1px solid var(--akcent);
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.zserviceDetail__tag:hover a {
+    color: var(--akcent);
+}
+
+/* end zserviceDetail */
