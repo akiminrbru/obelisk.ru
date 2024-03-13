@@ -17,8 +17,23 @@
     font-family: "Inter", sans-serif;
 }
 
+:target {
+    scroll-margin-top: 163px;
+}
+
+@media screen and (max-width:576px) {
+    :target {
+        scroll-margin-top: 130px;
+    }
+
+}
+
 img {
     display: block;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -4459,7 +4474,7 @@ body.active::after {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    padding-bottom: 90px;
+    padding-bottom: 30px;
 }
 
 .zserviceDetail__box {
@@ -4479,6 +4494,7 @@ body.active::after {
     height: 100%;
     display: block;
     object-fit: cover;
+    object-position: center;
 }
 
 .zserviceDetail__tags {
@@ -4503,6 +4519,494 @@ body.active::after {
 
 .zserviceDetail__tag:hover a {
     color: var(--akcent);
+}
+
+.zserviceDetail__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.zserviceDetail__strong {
+    display: block;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 150%;
+    color: var(--text);
+    padding: 13px 20px 13px 24px;
+    border-left: 4px solid var(--akcent);
+    background: #efedea;
+}
+
+.zserviceDetail__price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.zserviceDetail__price table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.zserviceDetail__price table thead {
+    background: #ebe5df;
+    border-bottom: 1px solid #ddd;
+}
+
+.zserviceDetail__price table thead th {
+    font-weight: 500;
+    font-size: 14px;
+    color: #0f1419;
+    text-align: start;
+    padding: 10px 0;
+}
+
+.zserviceDetail__price table tbody tr {
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.zserviceDetail__price table tbody tr:last-child {
+    border: 0;
+}
+
+.zserviceDetail__price table tbody tr:nth-child(2n + 1) {
+    background: #fff;
+}
+
+.zserviceDetail__price table tbody tr:nth-child(2n) {
+    background: #f9f9f9;
+}
+
+.zserviceDetail__price table tbody td {
+    padding: 20px 0;
+}
+
+.zserviceDetail__price table tbody td:nth-child(1) {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text);
+    padding-left: 20px;
+    width: 50%;
+}
+
+.zserviceDetail__price table tbody td:nth-child(2) {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--dop-cvet-teksta);
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.zserviceDetail__price table tbody td:nth-child(3) {
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--text);
+    padding-right: 20px;
+}
+
+.zserviceDetail__price table thead th:nth-child(1) {
+    padding-left: 20px;
+}
+
+.zserviceDetail__price table thead th:nth-child(2) {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.zserviceDetail__price table thead th:nth-child(3) {
+    padding-right: 20px;
+}
+
+.zserviceDetail__price_link {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 135%;
+    color: #fff;
+    border-radius: 3px;
+    padding: 13px 30px;
+    background: var(--akcent);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.zserviceDetail__price_link:hover {
+    background: #a58865;
+}
+
+.zserviceDetail__text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--text);
+}
+
+.zserviceDetail__text ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+    padding-left: 17px;
+}
+
+.zserviceDetail__text ul li {
+    position: relative;
+}
+
+.zserviceDetail__text ul li::before {
+    content: url('assets/icons/point.svg');
+    position: absolute;
+    left: -17px;
+}
+
+.zserviceDetail__catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.zserviceDetail__catalog_list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 27px;
+}
+
+.zserviceDetail__catalog_item {
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 20px;
+    position: relative;
+    min-height: 183px;
+}
+
+.zserviceDetail__catalog_item img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 127px;
+    height: 127px;
+    object-fit: cover;
+}
+
+.zserviceDetail__catalog_item a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text);
+    transition: color 0.3s ease-in-out;
+    width: min-content;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.zserviceDetail__catalog_item a::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-image: url('assets/icons/arr-right-black.svg');
+    background-position: center;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.zserviceDetail__catalog_item a:hover {
+    color: var(--akcent);
+}
+
+.zserviceDetail__catalog_item a:hover::after {
+    background-image: url('assets/icons/arr-right-gray.svg');
+}
+
+.zserviceDetail__form {
+    background-color: var(--text);
+    background-image: url('assets/img/serviceDetail/form.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 40px;
+    color: var(--fon);
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
+    gap: 20px;
+    height: 442px;
+    position: sticky;
+    top: 163px;
+}
+
+.zserviceDetail__form ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style-type: none;
+}
+
+.zserviceDetail__form ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 135%;
+    color: #fff;
+}
+
+.zserviceDetail__form h5 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 135%;
+    text-transform: uppercase;
+}
+
+.zserviceDetail__form form {
+    display: grid;
+    grid-template-rows: repeat(2, 43px);
+    gap: 10px;
+}
+
+.zserviceDetail__form form input {
+    border-radius: 3px;
+    padding: 12px 20px;
+    background-color: #fff;
+    outline: none;
+    border: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 135%;
+    color: var(--text);
+}
+
+.zserviceDetail__form form input::placeholder {
+    color: var(--dop-cvet-teksta);
+
+}
+
+.zserviceDetail__form form button {
+    border-radius: 3px;
+    padding: 12px 30px;
+    background: var(--akcent);
+    border: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 135%;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.zserviceDetail__form form button:hover {
+    background-color: #a58865;
+}
+
+.zserviceDetail__advant {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.zserviceDetail__advant_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    list-style-type: none;
+}
+
+.zserviceDetail__advant_item {
+    background: linear-gradient(329deg, #738287 0%, #e5e5e5 100%);
+    border-radius: 3px;
+    padding: 33px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.zserviceDetail__advant_top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.zserviceDetail__advant_top h5 {
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--text);
+}
+
+.zserviceDetail__advant_top p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    color: #4f4f4f;
+}
+
+.zserviceDetail__advant_item span {
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: var(--akcent);
+}
+
+@media screen and (max-width: 1200px) {
+    .zserviceDetail__catalog_list {
+        gap: 15px
+    }
+
+    .zserviceDetail__box {
+        grid-template-columns: 1fr 30%;
+        gap: 30px;
+    }
+
+    .zserviceDetail__form {
+        height: auto;
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .zserviceDetail__box {
+        grid-template-columns: 1fr;
+    }
+
+    .zserviceDetail__form {
+        align-items: flex-start;
+        position: static;
+    }
+
+    .zserviceDetail__form form {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .zserviceDetail__image {
+        height: 350px;
+    }
+
+    .zserviceDetail__catalog_list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .zserviceDetail__advant_item {
+        padding: 25px;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .zserviceDetail__inner {
+        gap: 15px;
+    }
+
+    .zserviceDetail__image {
+        margin-bottom: 15px;
+        height: 170px;
+    }
+
+    .zserviceDetail__tags {
+        margin-bottom: 20px;
+    }
+
+    .zserviceDetail__tag a {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+
+    .zserviceDetail__description {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .zserviceDetail__strong {
+        font-size: 15px;
+    }
+
+    .zserviceDetail__form {
+        margin: 0 -25px;
+        padding: 37px;
+    }
+
+    .zserviceDetail__catalog_list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .zserviceDetail__catalog_item {
+        min-height: 152px;
+        padding: 16px;
+    }
+
+    .zserviceDetail__catalog_item img {
+        width: 105px;
+        height: 105px;
+    }
+
+    .zserviceDetail__catalog {
+        gap: 15px;
+    }
+
+    .zserviceDetail__price {
+        gap: 15px;
+    }
+
+    .zserviceDetail__price_link {
+        font-size: 14px;
+    }
+
+    .zserviceDetail__text {
+        font-size: 15px;
+    }
+
+    .zserviceDetail__inner {
+        padding-bottom: 0;
+    }
+
+    .zserviceDetail__content {
+        padding-bottom: 10px;
+    }
+
+    .zmainExample__panel {
+        margin-bottom: 20px;
+    }
+
+    .zserviceDetail__advant_list {
+        grid-template-columns: 1fr;
+    }
+
+    .zserviceDetail__advant_item {
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .zserviceDetail__advant_top h5 {
+        font-size: 16px;
+    }
+
+    .zserviceDetail__advant_top p {
+        font-size: 14px;
+    }
+
+    .zserviceDetail__advant {
+        margin-top: 40px;
+    }
+
+    .zserviceDetail__advant_list {
+        gap: 15px;
+    }
 }
 
 /* end zserviceDetail */

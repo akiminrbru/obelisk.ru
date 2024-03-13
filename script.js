@@ -411,5 +411,24 @@ document.addEventListener("DOMContentLoaded", () => {
         back7?.append(enter7);
     }
 
+    // Перенос формы в деталки услуг
+
+    // Перенос описания на карточке товара     
+    let enter9 = document.querySelector('.zserviceDetail__form');
+    let place9 = document.querySelector('.zserviceDetail__content_top');
+    let back9 = document.querySelector('.zserviceDetail__sidebar');
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 992) {
+            place9?.after(enter9);
+        } else {
+            back9?.append(enter9);
+        }
+     });
+ 
+    if (window.innerWidth <= 992) {
+        place9?.after(enter9);
+    } else {
+        back9?.append(enter9);
+    }
 });
 
