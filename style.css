@@ -3390,23 +3390,23 @@ body.active::after {
 
 .zcardDetail__wrapper {
     display: grid;
-    grid-template-columns: 1fr 382px;
-    gap: 40px;
+    grid-template-columns: 1fr 355px;
+    gap: 65px;
 }
 
 .zcardDetail__content {
     display: grid;
-    grid-template-columns: 530px 1fr;
-    gap: 35px;
+    grid-template-columns: 420px 1fr;
+    gap: 67px;
 }
 
 .zcardDetail__slider {
-    padding: 20px;
+    padding: 16px;
     border-radius: 3px;
     background: #fff;
     overflow: hidden;
     position: relative;
-    max-height: 545px;
+    max-height: 432px;
 }
 
 .swiperCardDetail {
@@ -3436,7 +3436,7 @@ body.active::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 12px;
+    margin: 0 16px;
     pointer-events: none;
     z-index: 2;
 }
@@ -3450,99 +3450,28 @@ body.active::after {
 .zcardDetail__info {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-
-.zcardDetail__charact {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.zcardDetail__charact_items {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.zcardDetail__charact_item {
-    position: relative;
-    display: flex;
-
-}
-
-.zcardDetail__charact_title {
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 135%;
-    color: var(--text);
-}
-
-.zcardDetail__charact_item_key {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 135%;
-    color: var(--text);
-    flex: 0 1 40%;
-    z-index: 1;
-}
-
-.zcardDetail__charact_item_key span {
-    background-color: var(--fon);
-    padding-right: 6px;
-}
-
-.zcardDetail__charact_item_min {
-    flex: 1 0 auto;
-    min-width: 6px;
-    height: 0;
-    z-index: 1;
-}
-
-.zcardDetail__charact_item_value {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 135%;
-    color: var(--dop-cvet-teksta);
-    flex: 0 2 65%;
-    text-align: right;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    z-index: 1;
-}
-
-.zcardDetail__charact_item_value span {
-    background-color: var(--fon);
-    padding-left: 6px;
-}
-
-.zcardDetail__charact_item_line {
-    position: absolute;
-    width: 100%;
-    border-bottom: 1px dashed #bdbdbd;
-    margin-top: 13px;
-    z-index: 0;
+    gap: 30px;
 }
 
 .zcardDetail__advant {
-    padding: 20px 0;
-    border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .zcardDetail__advant_item {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 15px;
+    background: #efefef;
+    border-radius: 3px;
+    padding: 16px 20px;
 }
 
 .zcardDetail__advant_item img {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
 }
 
 .zcardDetail__advant_item p {
@@ -3582,6 +3511,7 @@ body.active::after {
 .zcardDetail__description {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 13px;
 }
 
@@ -3592,11 +3522,54 @@ body.active::after {
     color: var(--text);
 }
 
-.zcardDetail__description p {
+.zcardDetail__description_text {
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     color: var(--text);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.zcardDetail__description_text.active {
+    display: inline-block;
+}
+
+.zcardDetail__description_read {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--akcent);
+    cursor: pointer;
+    border-bottom: 1px solid var(--akcent);
+}
+
+.zcardDetail__description_read.active::before {
+    content: attr(data-text);
+    visibility: visible;
+    border-bottom: 1px solid var(--akcent);
+}
+
+.zcardDetail__description_read.active {
+    visibility: hidden;
+}
+
+.zcardDetail__links {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.zcardDetail__links li a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 135%;
+    color: var(--text);
+    text-decoration: none
 }
 
 .zcardDetail__good {
@@ -3698,18 +3671,24 @@ body.active::after {
     background-position: center;
 }
 
+.zcardDetail__sidebar_info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
 .zcardDetail__sidebar {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 25px;
 }
 
 .zcardDetail__sidebar_buy {
     position: sticky;
-    top: 153px;
+    top: 154px;
     z-index: 2;
     padding: 30px;
-    border: 1px solid #e8e8e8;
+    box-shadow: 0 2px 4px 0 rgba(98, 98, 98, 0.25), 0 8px 20px 0 rgba(173, 173, 173, 0.25);
     border-radius: 3px;
     background: #fff;
     display: flex;
@@ -3825,43 +3804,41 @@ body.active::after {
     padding-top: 5px;
 }
 
-.zcardDetail__sidebar_material {
-    border: 1px solid #e8e8e8;
+.zcardDetail__material {
     border-radius: 3px;
-    background: #fff;
-    padding: 25px 30px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
-.zcardDetail__sidebar_material_title {
+.zcardDetail__material_title {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 135%;
     color: var(--text);
+    padding-bottom: 5px;
 }
 
-.zcardDetail__sidebar_material_list {
+.zcardDetail__material_list {
     list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 11px 8px;
 }
 
-.zcardDetail__sidebar_material_list.active .zcardDetail__sidebar_material_item:nth-child(n + 11) {
+.zcardDetail__material_list.active .zcardDetail__material_item:nth-child(n + 13) {
     display: block;
 }
 
-.zcardDetail__sidebar_material_item:nth-child(n + 11) {
+.zcardDetail__material_item:nth-child(n + 13) {
     display: none;
 }
 
-.zcardDetail__sidebar_material_item input {
+.zcardDetail__material_item input {
     display: none;
 }
 
-.zcardDetail__sidebar_material_item label {
+.zcardDetail__material_item label {
     display: block;
     cursor: pointer;
     width: 100%;
@@ -3870,22 +3847,22 @@ body.active::after {
     position: relative;
 }
 
-.zcardDetail__sidebar_material_item label:hover .zcardDetail__sidebar_material_item_pop {
+.zcardDetail__material_item label:hover .zcardDetail__material_item_pop {
     display: grid;
 }
 
-.zcardDetail__sidebar_material_item input:checked+label {
+.zcardDetail__material_item input:checked+label {
     outline: 3px solid var(--akcent);
 }
 
-.zcardDetail__sidebar_material_item label img {
+.zcardDetail__material_item label img {
     aspect-ratio: 1/1;
     width: 100%;
     height: 100%;
     display: block;
 }
 
-.zcardDetail__sidebar_material_item_pop {
+.zcardDetail__material_item_pop {
     padding: 20px;
     box-shadow: 0 4px 15px 0 rgba(111, 111, 111, 0.25);
     background: #fff;
@@ -3900,7 +3877,7 @@ body.active::after {
     left: -380%;
 }
 
-.zcardDetail__sidebar_material_item_popsquareWrap {
+.zcardDetail__material_item_popsquareWrap {
     position: absolute;
     bottom: -10px;
     left: 0;
@@ -3909,44 +3886,40 @@ body.active::after {
     justify-content: center;
 }
 
-.zcardDetail__sidebar_material_item_popsquare {
+.zcardDetail__material_item_popsquare {
     background-color: #fff;
     width: 30px;
     height: 30px;
     transform: rotate(45deg);
 }
 
-.zcardDetail__sidebar_material_item_popleft {
+.zcardDetail__material_item_popleft {
     width: 97px;
     height: 97px;
     overflow: hidden;
 }
 
-.zcardDetail__sidebar_material_item_popright {
+.zcardDetail__material_item_popright {
     display: flex;
     flex-direction: column;
     gap: 7px;
 }
 
-.zcardDetail__sidebar_material_item_popright h5 {
+.zcardDetail__material_item_popright h5 {
     font-weight: 500;
     font-size: 15px;
     line-height: 135%;
     color: var(--text);
 }
 
-.zcardDetail__sidebar_material_item_popright p {
+.zcardDetail__material_item_popright p {
     font-weight: 400;
     font-size: 13px;
     line-height: 135%;
     color: var(--text);
 }
 
-.zcardDetail__sidebar_material_allWrap {
-    margin-top: 7px;
-}
-
-.zcardDetail__sidebar_material_all {
+.zcardDetail__material_all {
     display: inline;
     font-weight: 400;
     font-size: 14px;
@@ -3957,60 +3930,58 @@ body.active::after {
     transition: color 0.3s ease-in-out;
 }
 
-.zcardDetail__sidebar_material_all:hover {
+.zcardDetail__material_all:hover {
     color: var(--akcent);
 }
 
-.zcardDetail__sidebar_material_all.active {
+.zcardDetail__material_all.active {
     visibility: hidden;
 }
 
-.zcardDetail__sidebar_material_all.active::before {
-    content: "Закрыть";
+.zcardDetail__material_all.active::before {
+    content: attr(data-text);
     visibility: visible;
 }
 
-.zcardDetail__sidebar_material_info p {
+.zcardDetail__material_info p {
     font-weight: 500;
     font-size: 13px;
     line-height: 135%;
     color: var(--text);
 }
 
-.zcardDetail__sidebar_material_info p span {
+.zcardDetail__material_info p span {
     font-weight: 400;
 }
 
-.zcardDetail__sidebar_size {
-    padding: 25px 30px;
-    border: 1px solid #e8e8e8;
+.zcardDetail__size {
     border-radius: 3px;
-    background: #fff;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.zcardDetail__sidebar_size_title {
+.zcardDetail__size_title {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 135%;
     color: var(--text);
 }
 
-.zcardDetail__sidebar_size_selector {
+.zcardDetail__size_selector {
     position: relative;
 }
 
-.zcardDetail__sidebar_size_selector_default {
+.zcardDetail__size_selector_default {
+    background-color: #fff;
     cursor: pointer;
 }
 
-.zcardDetail__sidebar_size_selector_default input {
+.zcardDetail__size_selector_default input {
     display: none;
 }
 
-.zcardDetail__sidebar_size_selector_default label {
+.zcardDetail__size_selector_default label {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -4021,12 +3992,12 @@ body.active::after {
     pointer-events: none;
 }
 
-.zcardDetail__sidebar_size_selector_default.active label {
+.zcardDetail__size_selector_default.active label {
     border: 1px solid var(--akcent);
     border-radius: 3px 3px 0 0;
 }
 
-.zcardDetail__sidebar_size_selector_default label span {
+.zcardDetail__size_selector_default label span {
     font-weight: 400;
     font-size: 14px;
     line-height: 135%;
@@ -4034,14 +4005,14 @@ body.active::after {
     pointer-events: none;
 }
 
-.zcardDetail__sidebar_size_selector_default label img {
+.zcardDetail__size_selector_default label img {
     width: 20px;
     height: 20px;
     display: block;
     pointer-events: none;
 }
 
-.zcardDetail__sidebar_size_selector_items {
+.zcardDetail__size_selector_items {
     position: absolute;
     right: 0;
     left: 0;
@@ -4054,16 +4025,16 @@ body.active::after {
     list-style-type: none;
 }
 
-.zcardDetail__sidebar_size_selector_items.active {
+.zcardDetail__size_selector_items.active {
     display: flex;
     border-top: 0;
 }
 
-.zcardDetail__sidebar_size_selector_item input {
+.zcardDetail__size_selector_item input {
     display: none;
 }
 
-.zcardDetail__sidebar_size_selector_item label {
+.zcardDetail__size_selector_item label {
     display: block;
     width: 100%;
     cursor: pointer;
@@ -4074,11 +4045,11 @@ body.active::after {
     color: var(--text);
 }
 
-.zcardDetail__sidebar_size_selector_item.active label {
+.zcardDetail__size_selector_item.active label {
     background: #efeae3;
 }
 
-.zcardDetail__sidebar_size_selector_item label:hover {
+.zcardDetail__size_selector_item label:hover {
     color: var(--akcent);
 }
 
@@ -4202,7 +4173,7 @@ body.active::after {
         grid-template-columns: 1fr 320px;
     }
 
-    .zcardDetail__sidebar_material_list {
+    .zcardDetail__material_list {
         grid-template-columns: repeat(4, 1fr);
     }
 }
@@ -4220,11 +4191,11 @@ body.active::after {
         padding: 25px;
     }
 
-    .zcardDetail__sidebar_material {
+    .zcardDetail__material {
         padding: 25px;
     }
 
-    .zcardDetail__sidebar_size {
+    .zcardDetail__size {
         padding: 25px;
     }
 
@@ -4257,54 +4228,54 @@ body.active::after {
         gap: 25px;
     }
 
-    .zcardDetail__sidebar_material_listWrap {
+    .zcardDetail__material_listWrap {
         overflow: hidden;
     }
 
-    .zcardDetail__sidebar_material_listInner {
+    .zcardDetail__material_listInner {
         width: 100%;
         max-width: calc(100vw - 60px);
         overflow-x: scroll;
     }
 
-    .zcardDetail__sidebar_material_listInner::-webkit-scrollbar {
+    .zcardDetail__material_listInner::-webkit-scrollbar {
         display: none;
     }
 
-    .zcardDetail__sidebar_material_list {
+    .zcardDetail__material_list {
         display: flex;
         gap: 6px;
         align-items: center;
         padding: 3px 3px;
     }
 
-    .zcardDetail__sidebar_material_item label {
+    .zcardDetail__material_item label {
         width: 58px;
     }
 
-    .zcardDetail__sidebar_material {
+    .zcardDetail__material {
         padding: 0;
         background-color: transparent;
         border: 0;
         order: 1;
     }
 
-    .zcardDetail__sidebar_material_allWrap {
+    .zcardDetail__material_allWrap {
         display: none;
     }
 
-    .zcardDetail__sidebar_material_list .zcardDetail__sidebar_material_item:nth-child(n + 11) {
+    .zcardDetail__material_list .zcardDetail__material_item:nth-child(n + 11) {
         display: block;
     }
 
-    .zcardDetail__sidebar_size {
+    .zcardDetail__size {
         padding: 0;
         border: 0;
         background: transparent;
         order: 2;
     }
 
-    .zcardDetail__sidebar_size_selector_default {
+    .zcardDetail__size_selector_default {
         background-color: #fff;
     }
 
@@ -4384,7 +4355,7 @@ body.active::after {
         font-size: 15px;
     }
 
-    .zcardDetail__description p {
+    .zcardDetail__description_text {
         font-size: 14px;
     }
 
@@ -4439,14 +4410,14 @@ body.active::after {
         background-color: var(--akcent);
     }
 
-    .zcardDetail__sidebar_material_item_pop {
+    .zcardDetail__material_item_pop {
         display: none;
     }
 
 }
 
 @media screen and (min-width: 577px) {
-    .zcardDetail__sidebar_material_info {
+    .zcardDetail__material_info {
         display: none;
     }
 
@@ -4456,7 +4427,7 @@ body.active::after {
 }
 
 @media screen and (max-width: 350px) {
-    .zcardDetail__sidebar_material_listInner {
+    .zcardDetail__material_listInner {
         max-width: calc(100vw - 30px);
     }
 }

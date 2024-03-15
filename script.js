@@ -283,10 +283,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
     // Выбор материала
-    let btn_all_color = document.querySelector('.zcardDetail__sidebar_material_all');
-    let color_list = document.querySelector('.zcardDetail__sidebar_material_list');
-    let color_items = document.querySelectorAll('.zcardDetail__sidebar_material_item');
-    let color_info = document.querySelector('.zcardDetail__sidebar_material_info');
+    let btn_all_color = document.querySelector('.zcardDetail__material_all');
+    let color_list = document.querySelector('.zcardDetail__material_list');
+    let color_items = document.querySelectorAll('.zcardDetail__material_item');
+    let color_info = document.querySelector('.zcardDetail__material_info');
     
     let color_items_array = [];
 
@@ -301,7 +301,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     color_items_array?.map((el) => {
         let color_input = el?.querySelector('input');
-        let color_text = el?.querySelector('.zcardDetail__sidebar_material_item_title').textContent;
+        let color_text = el?.querySelector('.zcardDetail__material_item_title').textContent;
         if (color_input.checked) {
             color_info.querySelector('span').textContent = color_text;
         }
@@ -314,9 +314,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Выбор размера материала
 
-    let btn_openSelector = document.querySelector('.zcardDetail__sidebar_size_selector_default');
-    let selector_list = document.querySelector('.zcardDetail__sidebar_size_selector_items');
-    let selector_items = document.querySelectorAll('.zcardDetail__sidebar_size_selector_item');
+    let btn_openSelector = document.querySelector('.zcardDetail__size_selector_default');
+    let selector_list = document.querySelector('.zcardDetail__size_selector_items');
+    let selector_items = document.querySelectorAll('.zcardDetail__size_selector_item');
 
     let selector_item_array = [];
     if (selector_items) {
@@ -357,78 +357,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }        
     });
 
-    // Перенос описания на карточке товара     
-    let enter8 = document.querySelector('.zcardDetail__description');
-    let place8 = document.querySelector('.zcardDetail__another');
-    let back8 = document.querySelector('.zcardDetail__another');
-    window.addEventListener('resize', () => {
-        if (window.innerWidth <= 768) {
-            place8?.prepend(enter8);
-        } else {
-            back8?.before(enter8);
-        }
-     });
- 
-    if (window.innerWidth <= 768) {
-        place8?.prepend(enter8);
-    } else {
-        back8?.before(enter8);
-    }
 
-    // Перенос характеристик на карточке товара     
-    let enter6 = document.querySelector('.zcardDetail__info');
-    let place6 = document.querySelector('.zcardDetail__another');
-    let back6 = document.querySelector('.zcardDetail__content');
-    window.addEventListener('resize', () => {
-        if (window.innerWidth <= 768) {
-            place6?.prepend(enter6);
-        } else {
-            back6?.append(enter6);
-        }
-     });
- 
-    if (window.innerWidth <= 768) {
-        place6?.prepend(enter6);
-    } else {
-        back6?.append(enter6);
-    }
+    // Читать далее в карточке товара
 
-    // Перенос sidebar на карточке товара     
-    let enter7 = document.querySelector('.zcardDetail__sidebar');
-    let place7 = document.querySelector('.zcardDetail__content');
-    let back7 = document.querySelector('.zcardDetail__wrapper');
-    window.addEventListener('resize', () => {
-        if (window.innerWidth <= 768) {
-            place7?.append(enter7);
-        } else {
-            back7?.append(enter7);
-        }
-     });
- 
-    if (window.innerWidth <= 768) {
-        place7?.append(enter7);
-    } else {
-        back7?.append(enter7);
-    }
+    let description_read = document.querySelector('.zcardDetail__description_read');
+    let description_text = document.querySelector('.zcardDetail__description_text');
 
-    // Перенос формы в деталки услуг
-
-    // Перенос описания на карточке товара     
-    let enter9 = document.querySelector('.zserviceDetail__form');
-    let place9 = document.querySelector('.zserviceDetail__content_top');
-    let back9 = document.querySelector('.zserviceDetail__sidebar');
-    window.addEventListener('resize', () => {
-        if (window.innerWidth <= 992) {
-            place9?.after(enter9);
-        } else {
-            back9?.append(enter9);
-        }
-     });
- 
-    if (window.innerWidth <= 992) {
-        place9?.after(enter9);
-    } else {
-        back9?.append(enter9);
-    }
+    description_read?.addEventListener('click', (e) => {
+        description_read.classList.toggle('active');
+        description_text.classList.toggle('active');
+    });
 });
 
