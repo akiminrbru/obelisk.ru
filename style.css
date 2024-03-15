@@ -3569,7 +3569,14 @@ body.active::after {
     font-size: 16px;
     line-height: 135%;
     color: var(--text);
-    text-decoration: none
+    text-decoration: none;
+    padding-bottom: 10px;
+    border-bottom: 4px solid transparent;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+.zcardDetail__links li a:hover {
+    border-bottom: 4px solid var(--akcent);
 }
 
 .zcardDetail__good {
