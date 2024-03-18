@@ -578,28 +578,60 @@
                                     </div>
                                     <div class="zcardDetail__size">
                                         <h4 class="zcardDetail__size_title">Размер стелы</h4>
-                                        <div class="zcardDetail__size_selector">
-                                            <div class="zcardDetail__size_selector_default">
+                                        <div class="zcardDetail__selector">
+                                            <div class="zcardDetail__selector_default">
                                                 <input type="text" name="default" value="default1">
                                                 <label for="default1"><span>Стела 80×40×5 см</span><img
                                                         src="assets/icons/arr-down.svg" alt=""></label>
                                             </div>
-                                            <ul class="zcardDetail__size_selector_items">
-                                                <li class="zcardDetail__size_selector_item">
+                                            <ul class="zcardDetail__selector_items">
+                                                <li class="zcardDetail__selector_item">
                                                     <input type="radio" id="size1" name="size" value="size1">
                                                     <label for="size1">Стела 80×40×5 см</label>
                                                 </li>
-                                                <li class="zcardDetail__size_selector_item">
-                                                    <input type="radio" id="size2" name="size" value="size3">
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="size2" name="size" value="size2">
                                                     <label for="size2">Стела 80×40×8 см</label>
                                                 </li>
-                                                <li class="zcardDetail__size_selector_item">
+                                                <li class="zcardDetail__selector_item">
                                                     <input type="radio" id="size3" name="size" value="size3">
                                                     <label for="size3">Стела 80×40×10 см</label>
                                                 </li>
-                                                <li class="zcardDetail__size_selector_item">
+                                                <li class="zcardDetail__selector_item">
                                                     <input type="radio" id="size4" name="size" value="size4">
                                                     <label for="size4">Стела 100×50×5 см</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="zcardDetail__size">
+                                        <h4 class="zcardDetail__size_title">Размер цветника</h4>
+                                        <div class="zcardDetail__selector">
+                                            <div class="zcardDetail__selector_default">
+                                                <input type="text" name="default" value="default1">
+                                                <label for="default1"><span>Цветник 100×50×5×6см - 7 030 руб</span><img
+                                                        src="assets/icons/arr-down.svg" alt=""></label>
+                                            </div>
+                                            <ul class="zcardDetail__selector_items">
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="sizeGarden1" name="sizeGarden"
+                                                        value="sizeGarden1">
+                                                    <label for="sizeGarden1">Цветник 100×50×5×6см - 7 030 руб</label>
+                                                </li>
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="sizeGarden2" name="sizeGarden"
+                                                        value="sizeGarden2">
+                                                    <label for="sizeGarden2">Цветник 100×50×5×6см - 7 030 руб</label>
+                                                </li>
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="sizeGarden3" name="sizeGarden"
+                                                        value="sizeGarden3">
+                                                    <label for="sizeGarden3">Цветник 100×50×5×6см - 7 030 руб</label>
+                                                </li>
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="sizeGarden4" name="sizeGarden"
+                                                        value="sizeGarden4">
+                                                    <label for="sizeGarden4">Цветник 100×50×5×6см - 7 030 руб</label>
                                                 </li>
                                             </ul>
                                         </div>
@@ -608,12 +640,180 @@
                             </div>
                         </section>
                         <ul class="zcardDetail__links">
-                            <li><a href="#">Оформление</a></li>
-                            <li><a href="#">Услуги</a></li>
-                            <li><a href="#">Благоустройство</a></li>
-                            <li><a href="#">Описание</a></li>
+                            <li><a href="#decor">Оформление</a></li>
+                            <li><a href="#service">Услуги</a></li>
+                            <li><a href="#good">Благоустройство</a></li>
+                            <li><a href="#description">Описание</a></li>
                         </ul>
-                        <section class="zcardDetail__good">
+                        <section class="zcardDetail__decor" id="decor">
+                            <h3 class="zgeneral__subtitle">Оформление</h3>
+                            <div class="zcardDetail__decor_content">
+                                <div class="zcardDetail__decor_selectors">
+                                    <div class="zcardDetail__decor_selectors_item">
+                                        <h5>Гравировка портрета</h5>
+                                        <div class="zcardDetail__selector">
+                                            <div class="zcardDetail__selector_default">
+                                                <input type="text" name="default" value="default1">
+                                                <label for="default1"><span>1 портрет - 4 000 руб</span><img
+                                                        src="assets/icons/arr-down.svg" alt=""></label>
+                                            </div>
+                                            <ul class="zcardDetail__selector_items">
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="portret1" name="portret" value="portret1">
+                                                    <label for="portret1">1 портрет - 4 000 руб</label>
+                                                </li>
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="portret2" name="portret" value="portret2">
+                                                    <label for="portret2">2 портрета - 4 000 руб</label>
+                                                </li>
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="portret3" name="portret" value="portret3">
+                                                    <label for="portret3">3 портрета - 4 000 руб</label>
+                                                </li>
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="portret4" name="portret" value="portret4">
+                                                    <label for="portret4">4 портрета - 4 000 руб</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="zcardDetail__decor_selectors_item">
+                                        <h5>Гравировка ФИО</h5>
+                                        <div class="zcardDetail__selector">
+                                            <div class="zcardDetail__selector_default">
+                                                <input type="text" name="default" value="default1">
+                                                <label for="default1"><span>1 ФИО - 2 000 руб</span><img
+                                                        src="assets/icons/arr-down.svg" alt=""></label>
+                                            </div>
+                                            <ul class="zcardDetail__selector_items">
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="fio1" name="fio" value="fio1">
+                                                    <label for="fio1">1 ФИО - 2 000 руб</label>
+                                                </li>
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="fio2" name="fio" value="fio2">
+                                                    <label for="fio2">2 ФИО - 2 000 руб</label>
+                                                </li>
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="fio3" name="fio" value="fio3">
+                                                    <label for="fio3">3 ФИО - 2 000 руб</label>
+                                                </li>
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="fio4" name="fio" value="fio4">
+                                                    <label for="fio4">4 ФИО - 2 000 руб</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="zcardDetail__decor_selectors_item">
+                                        <h5>Фаска по краю</h5>
+                                        <div class="zcardDetail__selector">
+                                            <div class="zcardDetail__selector_default">
+                                                <input type="text" name="default" value="default1">
+                                                <label for="default1"><span>Прямая 1 см - 1 500 руб</span><img
+                                                        src="assets/icons/arr-down.svg" alt=""></label>
+                                            </div>
+                                            <ul class="zcardDetail__selector_items">
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="flat1" name="flat" value="flat1">
+                                                    <label for="flat1">Прямая 1 см - 1 500 руб</label>
+                                                </li>
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="flat2" name="flat" value="flat2">
+                                                    <label for="flat2">Прямая 2 см - 1 500 руб</label>
+                                                </li>
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="flat3" name="flat" value="flat3">
+                                                    <label for="flat3">Прямая 3 см - 1 500 руб</label>
+                                                </li>
+                                                <li class="zcardDetail__selector_item">
+                                                    <input type="radio" id="flat4" name="flat" value="flat4">
+                                                    <label for="flat4">Прямая 4 см - 1 500 руб</label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="zcardDetail__checkbox_list">
+                                    <li class="zcardDetail__checkbox_item">
+                                        <input type="checkbox" id="view1" checked>
+                                        <label for="view1">
+                                            <div></div>
+                                            <span>Полировка круговая (бесплатно)</span>
+                                        </label>
+                                    </li>
+                                    <li class="zcardDetail__checkbox_item">
+                                        <input type="checkbox" id="view2">
+                                        <label for="view2">
+                                            <div></div>
+                                            <span>Эпитафия 2 строки (бесплатно)</span>
+                                        </label>
+                                    </li>
+                                    <li class="zcardDetail__checkbox_item">
+                                        <input type="checkbox" id="view3">
+                                        <label for="view3">
+                                            <div></div>
+                                            <span>Цветок 1 шт (бесплатно)</span>
+                                        </label>
+                                    </li>
+                                    <li class="zcardDetail__checkbox_item">
+                                        <input type="checkbox" id="view4">
+                                        <label for="view4">
+                                            <div></div>
+                                            <span>Крестик 1 шт (бесплатно)</span>
+                                        </label>
+                                    </li>
+                                    <li class="zcardDetail__checkbox_item">
+                                        <input type="checkbox" id="view5">
+                                        <label for="view5">
+                                            <div></div>
+                                            <span>Икона на обратную сторону (4 300 руб)</span>
+                                        </label>
+                                    </li>
+                                    <li class="zcardDetail__checkbox_item">
+                                        <input type="checkbox" id="view6">
+                                        <label for="view6">
+                                            <div></div>
+                                            <span>Виньетка 1 шт (бесплатно)</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="zcardDetail__service" id="service">
+                            <h3 class="zgeneral__subtitle">Услуги</h3>
+                            <ul class="zcardDetail__checkbox_list">
+                                <li class="zcardDetail__checkbox_item">
+                                    <input type="checkbox" id="service1">
+                                    <label for="service1">
+                                        <div></div>
+                                        <span>Установка в Москве и МО ( Стандартная за 6 230 руб)</span>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__checkbox_item">
+                                    <input type="checkbox" id="service2">
+                                    <label for="service2">
+                                        <div></div>
+                                        <span>Хранение на складе</span>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__checkbox_item">
+                                    <input type="checkbox" id="service3">
+                                    <label for="service3">
+                                        <div></div>
+                                        <span>Защитное покрытие</span>
+                                    </label>
+                                </li>
+                                <li class="zcardDetail__checkbox_item">
+                                    <input type="checkbox" id="service4">
+                                    <label for="service4">
+                                        <div></div>
+                                        <span>Эскиз (500 руб)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="zcardDetail__good" id="good">
                             <div class="zcardDetail__good_top">
                                 <h3 class="zgeneral__subtitle">Благоустройство</h3>
                                 <p>Выберите товары, которые хотите добавить</p>
@@ -765,7 +965,7 @@
                                 </li>
                             </ul>
                         </section>
-                        <section class="zcardDetail__description">
+                        <section class="zcardDetail__description" id="description">
                             <h3 class="zgeneral__subtitle">Описание</h3>
                             <p class="zcardDetail__description_text">Классическая вертикальная стела выполнена в
                                 виде
@@ -780,9 +980,6 @@
                                 надпись, но и украсить ее декоративным орнаментом, цветком, траурным символом.</p>
                             <div class="zcardDetail__description_read" data-text="Скрыть">Читать далее</div>
                         </section>
-                        <div class="zcardDetail__another">
-
-                        </div>
                     </div>
                     <aside class="zcardDetail__sidebar">
                         <div class="zcardDetail__sidebar_buy">
@@ -831,119 +1028,11 @@
                             <div class="zcardDetail__delivery">
                                 <h5 class="zcardDetail__delivery_title">Доставка</h5>
                                 <ul class="zcardDetail__delivery_list">
-                                    <li>Доставка по Москве и МО от 1 000 руб</li>
-                                    <li>Доставка по России — 1 000 руб
+                                    <li>Доставка по Москве и МО от 1 500 руб</li>
+                                    <li>Доставка по России — 1 500 руб
                                         без учёта услуг ТК.</li>
                                     <li>Возможен самовывоз со склада
                                         в д. Семеново</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="zcardDetail__sidebar_settings">
-                            <div class="zcardDetail__sidebar_settings_title">
-                                <img src="assets/icons/card-settings.svg" alt="settings">
-                                <h4>Дополнения</h4>
-                            </div>
-                            <div class="zcardDetail__sidebar_settings_block">
-                                <h5 class="zcardDetail__sidebar_settings_block_title">Вид стелы</h5>
-                                <ul class="zcardDetail__sidebar_settings_block_list">
-                                    <li class="zcardDetail__sidebar_settings_block_item">
-                                        <input type="checkbox" id="view1" checked>
-                                        <label for="view1">
-                                            <div></div>
-                                            <span>Полировка круговая (бесплатно)</span>
-                                        </label>
-                                    </li>
-                                    <li class="zcardDetail__sidebar_settings_block_item">
-                                        <input type="checkbox" id="view2">
-                                        <label for="view2">
-                                            <div></div>
-                                            <span>Цветник 100×50×5×6см - 7 030 руб</span>
-                                        </label>
-                                    </li>
-                                    <li class="zcardDetail__sidebar_settings_block_item">
-                                        <input type="checkbox" id="view3">
-                                        <label for="view3">
-                                            <div></div>
-                                            <span>Гравировка ФИО (1 ФИО - 2 000 руб)</span>
-                                        </label>
-                                    </li>
-                                    <li class="zcardDetail__sidebar_settings_block_item">
-                                        <input type="checkbox" id="view4">
-                                        <label for="view4">
-                                            <div></div>
-                                            <span>Фаскаа по краю ( Прямая 1 см - 1 500 руб)</span>
-                                        </label>
-                                    </li>
-                                    <li class="zcardDetail__sidebar_settings_block_item">
-                                        <input type="checkbox" id="view5">
-                                        <label for="view5">
-                                            <div></div>
-                                            <span>Эпитафия 2 строки (бесплатно)</span>
-                                        </label>
-                                    </li>
-                                    <li class="zcardDetail__sidebar_settings_block_item">
-                                        <input type="checkbox" id="view6">
-                                        <label for="view6">
-                                            <div></div>
-                                            <span>Цветок 1 шт (бесплатно)</span>
-                                        </label>
-                                    </li>
-                                    <li class="zcardDetail__sidebar_settings_block_item">
-                                        <input type="checkbox" id="view7">
-                                        <label for="view7">
-                                            <div></div>
-                                            <span>Крестик 1 шт (бесплатно)</span>
-                                        </label>
-                                    </li>
-                                    <li class="zcardDetail__sidebar_settings_block_item">
-                                        <input type="checkbox" id="view8">
-                                        <label for="view8">
-                                            <div></div>
-                                            <span>Икона на обратную сторону (4 300 руб)</span>
-                                        </label>
-                                    </li>
-                                    <li class="zcardDetail__sidebar_settings_block_item">
-                                        <input type="checkbox" id="view9">
-                                        <label for="view9">
-                                            <div></div>
-                                            <span>Виньетка 1 шт (бесплатно)</span>
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="zcardDetail__sidebar_settings_line"></div>
-                            <div class="zcardDetail__sidebar_settings_block">
-                                <h5 class="zcardDetail__sidebar_settings_block_title">Услуги</h5>
-                                <ul class="zcardDetail__sidebar_settings_block_list">
-                                    <li class="zcardDetail__sidebar_settings_block_item">
-                                        <input type="checkbox" id="service1">
-                                        <label for="service1">
-                                            <div></div>
-                                            <span>Установка в Москве и МО ( Стандартная за 6 230 руб)</span>
-                                        </label>
-                                    </li>
-                                    <li class="zcardDetail__sidebar_settings_block_item">
-                                        <input type="checkbox" id="service2">
-                                        <label for="service2">
-                                            <div></div>
-                                            <span>Хранение на складе</span>
-                                        </label>
-                                    </li>
-                                    <li class="zcardDetail__sidebar_settings_block_item">
-                                        <input type="checkbox" id="service3">
-                                        <label for="service3">
-                                            <div></div>
-                                            <span>Защитное покрытие</span>
-                                        </label>
-                                    </li>
-                                    <li class="zcardDetail__sidebar_settings_block_item">
-                                        <input type="checkbox" id="service4">
-                                        <label for="service4">
-                                            <div></div>
-                                            <span>Эскиз (500 руб)</span>
-                                        </label>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -951,7 +1040,7 @@
                 </div>
             </div>
             <div class="zviewed">
-                <h2 class="zgeneral__subtitle">Просмотренные товары</h2>
+                <h3 class="zgeneral__subtitle">Просмотренные товары</h3>
                 <div class="zviewedProducts zmainProducts">
                     <div class="swiperProducts">
                         <div class="swiper-wrapper">

@@ -312,36 +312,56 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Выбор размера материала
+    // Selector
 
-    let btn_openSelector = document.querySelector('.zcardDetail__size_selector_default');
-    let selector_list = document.querySelector('.zcardDetail__size_selector_items');
-    let selector_items = document.querySelectorAll('.zcardDetail__size_selector_item');
+    let btn_openSelector = document.querySelectorAll('.zcardDetail__selector_default');
+    let selector_items = document.querySelectorAll('.zcardDetail__selector_item');
+
+    let btn_openSelector__array = [];
+    if (btn_openSelector && btn_openSelector.length !== 0) {
+        btn_openSelector__array = Array.from(btn_openSelector);
+    }
+
+    btn_openSelector__array?.map((elem) => {
+        elem.addEventListener('click', (e) => {         
+            let btn = e?.target;
+            let list = e.target.parentNode?.querySelector('.zcardDetail__selector_items');
+            
+            if (btn?.classList.contains('active')) {
+                btn?.classList.remove('active');
+                list?.classList.remove('active');
+            } else {
+                btn_openSelector__array?.map((elem) => {
+                    let btn = elem;
+                    let list = elem?.parentNode?.querySelector('.zcardDetail__selector_items');
+                    btn?.classList.remove('active');
+                    list?.classList.remove('active');
+                });   
+                btn?.classList.add('active');
+                list?.classList.add('active');
+            }
+        });
+    });
 
     let selector_item_array = [];
-    if (selector_items) {
+    if (selector_items && selector_items.length !==0) {
         selector_item_array = Array.from(selector_items);
     }
 
-    btn_openSelector?.addEventListener('click', () => {
-        btn_openSelector?.classList.toggle('active');
-        selector_list?.classList.toggle('active');
-    });
-
     selector_item_array?.map((elem) => {
         elem?.querySelector('label')?.addEventListener('click', (e) => {
-            selector_list?.classList.remove('active');
-            btn_openSelector?.classList.remove('active');
+            let list = e?.target?.parentNode?.parentNode;
+            let btn = e?.target?.parentNode?.parentNode?.parentNode?.querySelector('.zcardDetail__selector_default');
+            list?.classList.remove('active');
+            btn?.classList.remove('active');
 
-            let item =e.target?.parentNode;
-            let text = e.target.textContent;
-            let value = e.target?.parentNode?.querySelector('input')?.value;
-            let default_text = btn_openSelector?.querySelector('label span');
-            let default_value = btn_openSelector?.querySelector('input');
+            let text = e?.target?.textContent;
+            let default_text = btn?.querySelector('label span');
             default_text.textContent = text;
+            
+            let value = e.target?.parentNode?.querySelector('input')?.value;
+            let default_value = btn?.querySelector('input');
             default_value.value = value;
-            selector_item_array?.map((el) => el.classList.remove('active'));
-            item?.classList.add('active');
         });
     });
 

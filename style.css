@@ -3962,10 +3962,9 @@ body.active::after {
 }
 
 .zcardDetail__size {
-    border-radius: 3px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .zcardDetail__size_title {
@@ -3975,36 +3974,36 @@ body.active::after {
     color: var(--text);
 }
 
-.zcardDetail__size_selector {
+.zcardDetail__selector {
     position: relative;
 }
 
-.zcardDetail__size_selector_default {
+.zcardDetail__selector_default {
     background-color: #fff;
     cursor: pointer;
 }
 
-.zcardDetail__size_selector_default input {
+.zcardDetail__selector_default input {
     display: none;
 }
 
-.zcardDetail__size_selector_default label {
+.zcardDetail__selector_default label {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    border: 1px solid #e0e0e0;
-    padding: 14px 8px 14px 15px;
+    border: 1px solid transparent;
+    padding: 14px 13px 14px 15px;
     border-radius: 3px;
     pointer-events: none;
 }
 
-.zcardDetail__size_selector_default.active label {
+.zcardDetail__selector_default.active label {
     border: 1px solid var(--akcent);
     border-radius: 3px 3px 0 0;
 }
 
-.zcardDetail__size_selector_default label span {
+.zcardDetail__selector_default label span {
     font-weight: 400;
     font-size: 14px;
     line-height: 135%;
@@ -4012,14 +4011,14 @@ body.active::after {
     pointer-events: none;
 }
 
-.zcardDetail__size_selector_default label img {
+.zcardDetail__selector_default label img {
     width: 20px;
     height: 20px;
     display: block;
     pointer-events: none;
 }
 
-.zcardDetail__size_selector_items {
+.zcardDetail__selector_items {
     position: absolute;
     right: 0;
     left: 0;
@@ -4030,18 +4029,19 @@ body.active::after {
     box-shadow: 0 4px 4px 0 rgba(177, 177, 177, 0.25);
     background: #fff;
     list-style-type: none;
+    z-index: 1;
 }
 
-.zcardDetail__size_selector_items.active {
+.zcardDetail__selector_items.active {
     display: flex;
     border-top: 0;
 }
 
-.zcardDetail__size_selector_item input {
+.zcardDetail__selector_item input {
     display: none;
 }
 
-.zcardDetail__size_selector_item label {
+.zcardDetail__selector_item label {
     display: block;
     width: 100%;
     cursor: pointer;
@@ -4052,11 +4052,12 @@ body.active::after {
     color: var(--text);
 }
 
-.zcardDetail__size_selector_item.active label {
+.zcardDetail__selector_item input:checked+label {
     background: #efeae3;
+
 }
 
-.zcardDetail__size_selector_item label:hover {
+.zcardDetail__selector_item label:hover {
     color: var(--akcent);
 }
 
@@ -4067,60 +4068,18 @@ body.active::after {
     padding-bottom: 95px;
 }
 
-.zcardDetail__sidebar_settings {
-    border: 1px solid #e8e8e8;
-    border-radius: 3px;
-    background: #fff;
-    padding: 25px 30px;
+.zcardDetail__checkbox_list {
+    list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.zcardDetail__sidebar_settings_title {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.zcardDetail__sidebar_settings_title img {
-    width: 20px;
-    height: 20px;
-    display: block;
-}
-
-.zcardDetail__sidebar_settings_title h4 {
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 135%;
-    color: var(--text);
-}
-
-.zcardDetail__sidebar_settings_block {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.zcardDetail__sidebar_settings_block_title {
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 135%;
-    color: var(--text);
-}
-
-.zcardDetail__sidebar_settings_block_list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.zcardDetail__sidebar_settings_block_item input {
+.zcardDetail__checkbox_item input {
     display: none;
 }
 
-.zcardDetail__sidebar_settings_block_item label {
+.zcardDetail__checkbox_item label {
     display: grid;
     grid-template-columns: 22px 1fr;
     align-items: center;
@@ -4128,26 +4087,26 @@ body.active::after {
     cursor: pointer;
 }
 
-.zcardDetail__sidebar_settings_block_item label span {
+.zcardDetail__checkbox_item label span {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 135%;
     color: var(--text);
     transition: color 0.3s ease-in-out;
 }
 
-.zcardDetail__sidebar_settings_block_item label:hover span {
+.zcardDetail__checkbox_item label:hover span {
     color: var(--akcent);
 }
 
-.zcardDetail__sidebar_settings_block_item label div {
+.zcardDetail__checkbox_item label div {
     border: 2px solid #bdbdbd;
     border-radius: 3px;
     width: 22px;
     height: 22px;
 }
 
-.zcardDetail__sidebar_settings_block_item input:checked+label div {
+.zcardDetail__checkbox_item input:checked+label div {
     background-color: var(--akcent);
     border: 2px solid var(--akcent);
     background-image: url("assets/icons/card-okey.svg");
@@ -4155,8 +4114,61 @@ body.active::after {
     background-position: center;
 }
 
-.zcardDetail__sidebar_settings_line {
-    border-top: 1px solid #e0e0e0;
+.zcardDetail__service {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 35px;
+    margin-top: -30px;
+}
+
+.zcardDetail__decor {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 35px;
+    margin-top: -35px;
+}
+
+.zcardDetail__decor_content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 58px;
+}
+
+.zcardDetail__decor_selectors {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.zcardDetail__decor_content .zcardDetail__checkbox_list {
+    margin-top: 30px;
+}
+
+.zcardDetail__decor_content .zcardDetail__selector_default label {
+    background-color: #f4f5f6;
+}
+
+.zcardDetail__decor_content .zcardDetail__selector_items {
+    background-color: #f4f5f6;
+}
+
+.zcardDetail__decor_selectors_item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.zcardDetail__decor_selectors_item h5 {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 135%;
+    color: var(--text);
 }
 
 @media screen and (max-width: 1300px) {
@@ -4199,14 +4211,6 @@ body.active::after {
     }
 
     .zcardDetail__material {
-        padding: 25px;
-    }
-
-    .zcardDetail__size {
-        padding: 25px;
-    }
-
-    .zcardDetail__sidebar_settings {
         padding: 25px;
     }
 
@@ -4275,24 +4279,6 @@ body.active::after {
         display: block;
     }
 
-    .zcardDetail__size {
-        padding: 0;
-        border: 0;
-        background: transparent;
-        order: 2;
-    }
-
-    .zcardDetail__size_selector_default {
-        background-color: #fff;
-    }
-
-    .zcardDetail__sidebar_settings {
-        padding: 0;
-        border: 0;
-        background: transparent;
-        order: 3;
-    }
-
     .zcardDetail__sidebar_buy {
         padding: 20px;
         order: 4;
@@ -4302,12 +4288,6 @@ body.active::after {
         display: flex;
         flex-direction: column;
         gap: 25px;
-    }
-
-    .zcardDetail__another {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
     }
 
     .zcardDetail__description {
