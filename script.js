@@ -387,5 +387,22 @@ document.addEventListener("DOMContentLoaded", () => {
         description_read.classList.toggle('active');
         description_text.classList.toggle('active');
     });
+
+    // Перенос сайдбара в карточке товара
+    // let enter6 = document.querySelector('.zcardDetail__sidebar');
+    // let place6 = document.querySelector('.zcardDetail__service');
+    // let back6 = document.querySelector('.zfooter__bot-left');
+    // window.addEventListener('resize', () => {
+    //     if (window.innerWidth <= 992) {
+    //         place6?.append(enter6);
+    //     } else {
+    //         back6?.append(enter6);
+    //     }
+    // });
+    // if (window.innerWidth <= 992) {
+    //     place6?.append(enter6);
+    // } else {
+    //     back6?.append(enter6);
+    // }
 });
 
