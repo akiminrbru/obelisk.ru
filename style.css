@@ -3715,6 +3715,13 @@ body.active::after {
     color: var(--text);
 }
 
+.zcardDetail__sidebar_buy_text {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 5px
+}
+
 .zcardDetail__sidebar_buy_desc {
     display: flex;
     flex-direction: column;
@@ -4097,7 +4104,11 @@ body.active::after {
     line-height: 135%;
     color: var(--text);
     transition: color 0.3s ease-in-out;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
+
 
 .zcardDetail__checkbox_item label:hover span {
     color: var(--akcent);
