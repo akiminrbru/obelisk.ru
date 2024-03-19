@@ -4522,6 +4522,10 @@ body.active::after {
     .zcardDetail__description_read {
         display: none;
     }
+
+    .zcardDetail__checkbox_item label:hover span {
+        color: var(--text);
+    }
 }
 
 @media screen and (min-width: 577px) {
