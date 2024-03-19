@@ -389,20 +389,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Перенос сайдбара в карточке товара
-    // let enter6 = document.querySelector('.zcardDetail__sidebar');
-    // let place6 = document.querySelector('.zcardDetail__service');
-    // let back6 = document.querySelector('.zfooter__bot-left');
-    // window.addEventListener('resize', () => {
-    //     if (window.innerWidth <= 992) {
-    //         place6?.append(enter6);
-    //     } else {
-    //         back6?.append(enter6);
-    //     }
-    // });
-    // if (window.innerWidth <= 992) {
-    //     place6?.append(enter6);
-    // } else {
-    //     back6?.append(enter6);
-    // }
+    let enter6 = document.querySelector('.zcardDetail__sidebar');
+    let place6 = document.querySelector('.zcardDetail__service');
+    let back6 = document.querySelector('.zcardDetail__wrapper');
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 768) {
+            place6?.after(enter6);
+        } else {
+            back6?.append(enter6);
+        }
+    });
+    if (window.innerWidth <= 768) {
+        place6?.after(enter6);
+    } else {
+        back6?.append(enter6);
+    }
+
+     // Перенос описания в карточке товара
+     let enter7 = document.querySelector('.zcardDetail__description');
+     let place7 = document.querySelector('.zcardDetail__good');
+     let back7 = document.querySelector('.zcardDetail__good');
+     window.addEventListener('resize', () => {
+         if (window.innerWidth <= 768) {
+            place7?.before(enter7);
+         } else {
+            back7?.after(enter7);
+         }
+     });
+     if (window.innerWidth <= 768) {
+        place7?.before(enter7);
+     } else {
+        back7?.after(enter7);
+     }
 });
 

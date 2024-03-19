@@ -4230,12 +4230,34 @@ body.active::after {
     }
 }
 
-@media screen and (max-width: 1000px) {
-    .zcardDetail__wrapper {
-        grid-template-columns: 1fr 320px;
+@media screen and (max-width: 992px) {
+    .zcardDetail__decor_content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .zcardDetail__decor_content .zcardDetail__checkbox_list {
+        margin: 0;
+    }
+
+    .zcardDetail__material {
+        padding: 0;
+    }
+
+    .zcardDetail__links {
+        gap: 12px;
+    }
+
+    .zcardDetail__links li a {
+        font-size: 15px;
     }
 }
 
+@media screen and (min-width: 769px) {
+    .zcardDetail__material_info {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .zcardDetail__wrapper {
@@ -4269,6 +4291,7 @@ body.active::after {
         gap: 6px;
         align-items: center;
         padding: 3px 3px;
+        flex-wrap: nowrap;
     }
 
     .zcardDetail__material_item label {
@@ -4279,20 +4302,18 @@ body.active::after {
         padding: 0;
         background-color: transparent;
         border: 0;
-        order: 1;
     }
 
     .zcardDetail__material_allWrap {
         display: none;
     }
 
-    .zcardDetail__material_list .zcardDetail__material_item:nth-child(n + 11) {
-        display: block;
-    }
-
     .zcardDetail__sidebar_buy {
         padding: 20px;
-        order: 4;
+        position: static;
+        border: 1px solid #e8e8e8;
+        border-radius: 3px;
+        box-shadow: none;
     }
 
     .zcardDetail__sidebar {
@@ -4307,6 +4328,35 @@ body.active::after {
 
     .zcardDetail__zsecondary {
         gap: 25px;
+    }
+
+    .zcardDetail__links {
+        display: none;
+    }
+
+    .zcardDetail__decor {
+        margin: 0;
+    }
+
+    .zcardDetail__service {
+        margin: 0;
+    }
+
+    .zcardDetail__info {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .zcardDetail__material_item:nth-child(n + 13) {
+        display: block;
+    }
+
+    .zcardDetail__material_item_pop {
+        display: none;
+    }
+
+    .zcardDetail__material_item label:hover .zcardDetail__material_item_pop {
+        display: none;
     }
 }
 
@@ -4408,17 +4458,73 @@ body.active::after {
         background-color: var(--akcent);
     }
 
-    .zcardDetail__material_item_pop {
-        display: none;
+    .zcardDetail__slider {
+        padding: 13px 12px;
     }
 
+    .zcardDetail__material {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .zcardDetail__material_title {
+        padding-bottom: 0;
+        font-size: 15px;
+    }
+
+    .zcardDetail__size {
+        gap: 10px;
+    }
+
+    .zcardDetail__size_title {
+        font-size: 15px;
+    }
+
+    .zcardDetail__service {
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .zcardDetail__checkbox_item label span {
+        font-size: 14px;
+    }
+
+    .zcardDetail__decor {
+        padding: 0;
+        background-color: transparent;
+        gap: 20px;
+    }
+
+    .zcardDetail__decor_selectors_item h5 {
+        font-weight: 500;
+    }
+
+    .zcardDetail__decor_content .zcardDetail__selector_default label {
+        background-color: #fff;
+    }
+
+    .zcardDetail__decor_content .zcardDetail__selector_items {
+        background-color: #fff;
+    }
+
+    .zcardDetail__decor_content {
+        gap: 20px;
+    }
+
+    .zcardDetail__description {
+        margin-bottom: 15px;
+    }
+
+    .zcardDetail__description_text {
+        display: inline-block;
+    }
+
+    .zcardDetail__description_read {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 577px) {
-    .zcardDetail__material_info {
-        display: none;
-    }
-
     .swiper-pagination-cardDetail {
         display: none;
     }
