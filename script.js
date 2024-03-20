@@ -444,7 +444,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let form_success = document.querySelector('.zform__success');
     let form_success_inner = document.querySelector('.zform__success_inner');
 
-    btn_call?.addEventListener('click', () => {
+    btn_call?.addEventListener('click', (e) => {
+        e.preventDefault();
         form_success.classList.add('active');
         body_item?.classList.add('active');
     });
