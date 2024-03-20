@@ -442,24 +442,35 @@ document.addEventListener("DOMContentLoaded", () => {
     // Открытие модалки при клике закзать звонок
     let btn_call = document.querySelector('.zcardDetail__sidebar_call');
     let form_success = document.querySelector('.zform__success');
+    let form_success_inner = document.querySelector('.zform__success_inner');
 
-    
     btn_call?.addEventListener('click', () => {
         form_success.classList.add('active');
+        body_item?.classList.add('active');
     });
-
 
     // Закртиые модалки success
 
-    let btn_succes_okey = document.querySelector('.zform__success_okey');
+    let btn_success_okey = document.querySelector('.zform__success_okey');
     let btn_success_close = document.querySelector('.zform__success_close');
 
-    btn_succes_okey?.addEventListener('click', () => {
+    btn_success_okey?.addEventListener('click', () => {
         form_success.classList.remove('active');
+        body_item?.classList.remove('active');
     });
 
     btn_success_close?.addEventListener('click', () => {
         form_success.classList.remove('active');
+        body_item?.classList.remove('active');
+    });
+
+    form_success?.addEventListener('click', () => {
+        form_success.classList.remove('active');
+        body_item?.classList.remove('active');
+    });
+
+    form_success_inner.addEventListener('click', (e) => {
+        e.stopPropagation();
     });
 });
 
