@@ -405,21 +405,61 @@ document.addEventListener("DOMContentLoaded", () => {
         back6?.append(enter6);
     }
 
-     // Перенос описания в карточке товара
-     let enter7 = document.querySelector('.zcardDetail__description');
-     let place7 = document.querySelector('.zcardDetail__good');
-     let back7 = document.querySelector('.zcardDetail__good');
-     window.addEventListener('resize', () => {
-         if (window.innerWidth <= 768) {
+    // Перенос описания в карточке товара
+    let enter7 = document.querySelector('.zcardDetail__description');
+    let place7 = document.querySelector('.zcardDetail__good');
+    let back7 = document.querySelector('.zcardDetail__good');
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 768) {
             place7?.before(enter7);
-         } else {
+        } else {
             back7?.after(enter7);
-         }
-     });
-     if (window.innerWidth <= 768) {
+        }
+    });
+    if (window.innerWidth <= 768) {
         place7?.before(enter7);
-     } else {
+    } else {
         back7?.after(enter7);
-     }
+    }
+
+    // При клике на Оформить заказ
+
+    let btn_order = document.querySelector('.zcardDetail__sidebar_buy_order');
+    let btn_cancel = document.querySelector('.zcardDetail__sidebar_cancel');
+    let order_step1 = document.querySelector('.zcardDetail__sidebar_buy_bot');
+    let order_step2 = document.querySelector('.zcardDetail__sidebar_buy_next')
+
+    btn_order?.addEventListener('click', () => {
+        order_step1?.classList.add('active');
+        order_step2?.classList.add('active');
+    });
+
+    btn_cancel?.addEventListener('click', () => {
+        order_step1?.classList.remove('active');
+        order_step2?.classList.remove('active');
+    });
+
+    // Открытие модалки при клике закзать звонок
+    let btn_call = document.querySelector('.zcardDetail__sidebar_call');
+    let form_success = document.querySelector('.zform__success');
+
+    
+    btn_call?.addEventListener('click', () => {
+        form_success.classList.add('active');
+    });
+
+
+    // Закртиые модалки success
+
+    let btn_succes_okey = document.querySelector('.zform__success_okey');
+    let btn_success_close = document.querySelector('.zform__success_close');
+
+    btn_succes_okey?.addEventListener('click', () => {
+        form_success.classList.remove('active');
+    });
+
+    btn_success_close?.addEventListener('click', () => {
+        form_success.classList.remove('active');
+    });
 });
 
