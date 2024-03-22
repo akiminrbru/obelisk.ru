@@ -4,6 +4,8 @@
     --dop-cvet-teksta: #828282;
     --fon: #f8f9fa;
     --dop-cvet-fona: #738287;
+    --fon-2: #e7dfd3;
+    --2: #e78613;
 }
 
 #reviews:target {
@@ -102,7 +104,7 @@ body.active::after {
 
 .zgeneral__title {
     color: #34322D;
-    font-size: 34px;
+    font-size: clamp(1.5rem, 1.3407rem + 0.6536vw, 2.125rem);
     font-weight: 600;
     line-height: 135%;
     text-transform: uppercase;
@@ -114,7 +116,7 @@ body.active::after {
 
 .zgeneral__subtitle {
     font-weight: 600;
-    font-size: 26px;
+    font-size: clamp(1.25rem, 1.1544rem + 0.3922vw, 1.625rem);
     line-height: 135%;
     text-transform: uppercase;
     color: var(--text);
@@ -132,26 +134,6 @@ body.active::after {
     }
 }
 
-
-@media screen and (max-width: 992px) {
-    .zgeneral__title {
-        font-size: 28px;
-    }
-
-    .zgeneral__subtitle {
-        font-size: 23px;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .zgeneral__title {
-        font-size: 24px;
-    }
-
-    .zgeneral__subtitle {
-        font-size: 20px;
-    }
-}
 
 /* Header */
 
@@ -5274,3 +5256,275 @@ body.active::after {
 }
 
 /* end zserviceDetail */
+
+
+/* start company */
+
+.zcompanyBanner__breadcrumbs .zbreadcrumbs__inner {
+    padding: 0;
+}
+
+.zcompanyBanner__breadcrumbs .zbreadcrumbs {
+    background-color: transparent;
+}
+
+.zcompanyBanner__breadcrumbs .zbreadcrumbs .zcontainer {
+    margin: 0;
+}
+
+.zcompanyBanner {
+    background-image: url('assets/img/company/fon.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.zcompanyBanner__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 153px 0;
+}
+
+@media screen and (max-width: 576px) {
+    .zcompanyBanner__inner {
+        padding: 65px 0;
+        gap: 20px;
+    }
+}
+
+.zcompanyAdvant__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.zcompanyAdvant__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    list-style-type: none;
+}
+
+.zcompanyAdvant__item {
+    padding: 33px;
+    border-radius: 3px;
+    background: linear-gradient(329deg, #738287 0%, #e5e5e5 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+}
+
+.zcompanyAdvant__item_top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.zcompanyAdvant__item_title {
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--text);
+}
+
+.zcompanyAdvant__item_desc {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    color: #4f4f4f;
+}
+
+.zcompanyAdvant__item_number {
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: var(--akcent);
+    margin-top: auto;
+}
+
+@media screen and (max-width: 992px) {
+    .zcompanyAdvant__item {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .zcompanyAdvant__list {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .zcompanyAdvant__item_title {
+        font-size: 16px;
+    }
+
+    .zcompanyAdvant__item_desc {
+        font-size: 14px;
+    }
+
+    .zcompanyAdvant__item_number {
+        font-size: 14px;
+    }
+
+    .zcompanyAdvant__item {
+        gap: 30px;
+    }
+}
+
+.zcompanyBlock {
+    position: relative;
+}
+
+.zcompanyBlock__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 676px;
+}
+
+.zcompanyBlock__right {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.zcompanyBlock__right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.zcompanyBlock__left {
+    position: absolute;
+    left: 0;
+    right: 50%;
+    top: 0;
+    bottom: 0;
+    background: radial-gradient(140.79% 121.24% at 12.81% 16.62%, #29343A 0%, #5B6C74 100%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.zcompanyBlock__content {
+    max-width: 650px;
+    padding-right: 160px;
+}
+
+.zcompanyBlock__content h2 {
+    margin-bottom: 20px;
+}
+
+.zcompanyBlock__content p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 145%;
+    color: #fff;
+}
+
+@media screen and (max-width: 1350px) {
+    .zcompanyBlock__content {
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .zcompanyBlock__content {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .zcompanyBlock__inner {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        margin: 0 -25px;
+    }
+
+    .zcompanyBlock__left {
+        position: static;
+        justify-content: flex-start;
+    }
+
+    .zcompanyBlock__right {
+        position: static;
+        height: 400px;
+    }
+
+    .zcompanyBlock__content {
+        padding: 30px 25px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .zcompanyBlock__right {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .zcompanyBlock__right {
+        height: 275px;
+    }
+
+    .zcompanyBlock__content p {
+        font-size: 15px;
+    }
+}
+
+.zcompanyInfo__inner {
+    display: grid;
+    grid-template-columns: 560px 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.zcompanyInfo__left {
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.zcompanyInfo__left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: center;
+}
+
+.zcompanyInfo__right {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    align-items: flex-start;
+}
+
+.zcompanyInfo__link {
+    padding: 13px 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 135%;
+    border-radius: 3px;
+    color: #fff;
+    background-color: var(--akcent);
+    cursor: pointer;
+    border: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.zcompanyInfo__link:hover {
+    background-color: #a58865;
+}
+
+.zcompanyInfo__text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* end company */
