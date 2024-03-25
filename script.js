@@ -470,8 +470,37 @@ document.addEventListener("DOMContentLoaded", () => {
         body_item?.classList.remove('active');
     });
 
-    form_success_inner.addEventListener('click', (e) => {
+    form_success_inner?.addEventListener('click', (e) => {
         e.stopPropagation();
+    });
+
+    // Открытие модалки на странице отзывов
+    
+    let modal_review = document.querySelector('.zreviews__right');
+    let btn_review_open = document.querySelector('.zreviews__modal_btn');
+
+    btn_review_open?.addEventListener('click', () => {
+        modal_review?.classList.add('active');
+        body_item.classList.add('active');
+    });
+
+    // Закрытие модалки на странице отзывов
+
+    let btn_review_close = document.querySelector('.zreviews__right_close');
+
+    btn_review_close?.addEventListener('click', () => {
+        modal_review?.classList.remove('active');
+        body_item.classList.remove('active');
+    });
+
+    // Читать далее на странице Оформление
+
+    let decor__readmore = document.querySelector('.zdecorContent__readmore');
+    let decor__hidden = document.querySelector('.zdecorContent__hidden');
+
+    decor__readmore?.addEventListener('click', () => {
+        decor__readmore.classList.toggle('active');
+        decor__hidden.classList.toggle('active');
     });
 });
 
