@@ -6422,6 +6422,7 @@ body.active::after {
     border-radius: 3px;
     background: #c98636;
     padding: 19px 130px 19px 32px;
+    margin-bottom: 10px;
 }
 
 .zworks__advant_item {
@@ -6443,10 +6444,79 @@ body.active::after {
     color: #fff;
 }
 
+.zworks__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
 
 .zworks__item {
     display: grid;
     grid-template-columns: 57.7% 42.3%;
+    grid-template-rows: 473px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.zworks__item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.zworks__item_left {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 3px;
+    position: relative;
+}
+
+.zworks__item_left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.swiperWorks {
+    height: 100%;
+}
+
+.zworks__item_buttons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    padding-bottom: 14px;
+}
+
+.swiper-works-prev,
+.swiper-works-next {
+    width: 35px;
+    height: 35px;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.zworks__item_left .swiper-pagination-works {
+    width: auto;
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+
+.zworks__item_resize {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    cursor: pointer;
 }
 
 .zworks__item_right {
@@ -6514,6 +6584,277 @@ body.active::after {
 .zworks__item_price:hover {
     background-color: var(--akcent);
     color: #fff;
+}
+
+.zworks__loadmore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.zworks__loadmore_btn {
+    border-radius: 3px;
+    background-color: var(--akcent);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 135%;
+    color: #fff;
+    padding: 13px 50px;
+    cursor: pointer;
+    border: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.zworks__loadmore_btn:hover {
+    background-color: #a58865;
+}
+
+.zworks__loadmore_text {
+    font-weight: 400;
+    font-size: 13px;
+    text-align: center;
+    color: var(--dop-cvet-teksta);
+}
+
+.zworksCatalog__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.zworksCatalog__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.zworksCatalog__item {
+    padding: 20px;
+    border-radius: 3px;
+    background-color: #fff;
+    position: relative;
+    height: 183px;
+    max-width: 300px;
+    overflow: hidden;
+}
+
+.zworksCatalog__item_link {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.zworksCatalog__item_link::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-image: url(assets/icons/arr-right-black.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.3s ease-in-out background-image;
+}
+
+.zworksCatalog__item_link:hover::after {
+    background-image: url(assets/icons/arr-right-gray.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.zworksCatalog__item_link:hover {
+    color: var(--akcent)
+}
+
+.zworksCatalog__item_img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 127px;
+    height: 127px;
+}
+
+@media screen and (max-width: 1350px) {
+    .zworksCatalog__list {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .zworks__advant {
+        padding: 20px 30px;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .zworksCatalog__list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .zworks__advant {
+        padding: 20px 15px;
+        gap: 30px;
+    }
+
+    .zworks__item {
+        grid-template-rows: 400px;
+    }
+
+    .zworks__item_right {
+        padding-left: 40px;
+        gap: 30px;
+    }
+
+    .zworks__advant {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .zworksCatalog__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .zworks__item {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        grid-template-rows: auto;
+    }
+
+    .zworks__item_left {
+        height: 450px;
+    }
+
+    .zworksCatalog__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .swiper-works-prev,
+    .swiper-works-next {
+        display: none;
+    }
+
+    .zworks__inner {
+        gap: 25px;
+    }
+
+    .zworks__item_left {
+        height: 254px;
+    }
+
+    .zworks__tags_link {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .zworks__tags {
+        gap: 8px;
+    }
+
+    .zworks__tags_wrapper {
+        gap: 15px;
+    }
+
+    .zworks__tags_all {
+        font-size: 15px;
+    }
+
+    .zworks__advant {
+        margin-bottom: 5px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 23px 18px;
+
+    }
+
+    .zworks__advant_item {
+        gap: 10px;
+    }
+
+    .zworks__advant_item p {
+        font-size: 14px;
+    }
+
+    .zworks__item_resize {
+        width: 25px;
+        height: 25px;
+        top: 9px;
+        right: 9px;
+    }
+
+    .zworks__item_right {
+        padding: 0;
+        gap: 20px;
+    }
+
+    .zworks__item_props {
+        gap: 10px;
+    }
+
+    .zworks__item {
+        gap: 20px;
+    }
+
+    .zworks__item_prop {
+        gap: 10px;
+    }
+
+    .zworks__item_prop span:last-child {
+        font-size: 13px;
+    }
+
+    .zworks__item_prop span:first-child {
+        font-size: 13px;
+        min-width: 70px;
+    }
+
+    .zworks__item_price {
+        padding: 13px 18.5px;
+        font-size: 14px;
+    }
+
+    .zworks__item_buttons {
+        padding-bottom: 12px;
+    }
+
+    .zworks__item_buttons .swiper-pagination-bullet {
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .zworks__item_buttons .swiper-pagination-bullet-active {
+        background-color: var(--akcent);
+    }
+
+    .zworksCatalog__list {
+        gap: 10px;
+    }
+
+    .zworksCatalog__item {
+        height: 150px;
+        padding: 16px;
+    }
+
+    .zworksCatalog__item_link {
+        font-size: 12px;
+    }
+
+    .zworksCatalog__item_img {
+        width: 105px;
+        height: 105px;
+    }
 }
 
 /* end works */

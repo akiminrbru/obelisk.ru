@@ -505,30 +505,26 @@ document.addEventListener("DOMContentLoaded", () => {
         decor__hidden.classList.toggle('active');
     });
 
-    // Создание карты
 
-    var myMap;
-    ymaps.ready(init);
-    function init() {
-        myMap = new ymaps.Map('map', {
-            center: [55.68452, 37.73937930688473], // Москва
-            zoom: 15,
-            controls: []
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
-            myPlacemark = new ymaps.Placemark([55.68452, 37.73937930688473], {
-                hintContent: 'Obelisk.ru',
-                balloonContent: 'Obelisk.ru'
-            }, {
-                iconLayout: 'default#image',
-                iconImageHref: 'assets/icons/placemark.svg',
-                iconImageSize: [45, 45],
-                iconImageOffset: [0, 0]
-            })
-
-        myMap.geoObjects
-            .add(myPlacemark);
-    }
+    // SwiperWorks
+    const swiperWorks = new Swiper('.swiperWorks', {
+        direction: 'horizontal',
+        loop: true,
+        spaceBetween: 20,
+        pagination: {
+          el: '.swiper-pagination-works',
+        },
+        navigation: {
+          nextEl: '.swiper-works-next',
+          prevEl: '.swiper-works-prev',
+        },
+        breakpoints: {
+            576: {
+                pagination: {
+                    type: 'fraction',
+                },
+            }
+        }
+    });
 });
 
