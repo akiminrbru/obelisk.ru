@@ -7529,6 +7529,7 @@ body.active::after {
     transition: 0.25s;
     position: relative;
     overflow-y: auto;
+    box-shadow: 4px 0px 50px 0px rgba(113, 113, 113, 1);
 }
 
 .zcartpopup_wrapper.active .zcartpopup {
