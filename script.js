@@ -526,5 +526,32 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
+
+
+    // Открытие выпадающей корзины
+
+    const popup_cart_open = document.querySelector('.zheader__cart'); 
+    const popup_cart_close = document.querySelector('.zcartpopup_close');
+    const popup_cart_wrapper = document.querySelector('.zcartpopup_wrapper');
+    const popup_cart = document.querySelector('.zcartpopup');
+
+    console.log(popup_cart_open)
+
+    popup_cart_open?.addEventListener('click', () => {
+        popup_cart_wrapper?.classList.toggle('active');
+    });
+
+    popup_cart_close?.addEventListener('click', () => {
+        popup_cart_wrapper?.classList.toggle('active');
+    });
+
+    popup_cart_wrapper?.addEventListener('click', (e) => {
+        e.target.classList.toggle('active');
+    });
+
+    popup_cart?.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
 });
 
