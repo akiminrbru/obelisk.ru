@@ -278,7 +278,7 @@ body.active::after {
 
 .zheader__nav {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     gap: 30px;
     position: relative;
 }
@@ -353,46 +353,8 @@ body.active::after {
     .zheader__social,
     .zheader__cart-text,
     .zheader__contactus-wrap,
-    .zheader__nav-catalogImg,
-    .zheader__catalog-btnBack,
-    .zheader__catalog {
+    .zheader__nav-catalogImg {
         display: none;
-    }
-
-    .zheader__catalog.active {
-        display: block;
-        position: absolute;
-        background-color: #fff;
-        top: 50px;
-    }
-
-    .zheader__catalog-links {
-        list-style-type: none;
-        display: flex;
-        flex-direction: column;
-        padding-top: 8px;
-    }
-
-    .zheader__catalog-links li {
-        border-bottom: 1px solid #E0E0E0;
-    }
-
-    .zheader__catalog-links li a {
-        padding: 16px 25px;
-        display: flex;
-        justify-content: space-between;
-        gap: 100px;
-        align-items: center;
-        text-decoration: none;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 135%;
-        color: #34322d;
-        transition: color 0.3s ease-in-out;
-    }
-
-    .zheader__catalog-links li a:hover {
-        color: #b29470;
     }
 }
 
@@ -404,13 +366,6 @@ body.active::after {
         gap: 25px;
         align-items: baseline;
         width: 100%;
-    }
-
-    .zheader__catalog-btnWrap {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        justify-content: space-between;
     }
 
     .zheader__nav-catalogImg {
@@ -444,56 +399,6 @@ body.active::after {
         transition: 0.3s ease-in-out transform;
     }
 
-    .zheader__catalog {
-        position: fixed;
-        top: 0;
-        background-color: var(--fon);
-        left: 0;
-        width: 390px;
-        bottom: 0;
-        border: 0;
-        transform: translateX(-200%);
-        transition: 0.3s ease-in-out transform;
-    }
-
-    .zheader__catalog.active {
-        transform: translateX(0%);
-    }
-
-    .zheader__catalog-btnBack {
-        padding: 25px 25px 5px 25px;
-        display: flex;
-        align-items: center;
-        gap: 3px;
-    }
-
-    .zheader__catalog-links li {
-        display: block;
-        border-bottom: 1px solid #E0E0E0;
-        padding: 15px 25px;
-    }
-
-    .zheader__catalog-links li:last-child {
-        border: 0;
-    }
-
-    .zheader__catalog-links li a {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: #34322D;
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 135%;
-        text-decoration: none;
-    }
-
-    .zheader__catalog-btnBack p {
-        color: #34322D;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 135%;
-    }
 
     .zheader__bot.active {
         transform: translateX(0%);
@@ -584,8 +489,7 @@ body.active::after {
 
 @media screen and (max-width: 390px) {
 
-    .zheader__bot,
-    .zheader__catalog {
+    .zheader__bot {
         width: 100%;
     }
 
@@ -7654,3 +7558,223 @@ body.active::after {
 }
 
 /* end cart */
+
+/* Форма звонка */
+
+.zpopup_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    background-color: rgba(27, 27, 27, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    height: 100dvh;
+}
+
+.zpopup_wrapper.active {
+    display: flex;
+}
+
+.zpopup {
+    border-radius: 3px;
+    background-color: #516068;
+    padding: 40px 50px;
+    min-width: 640px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0 25px;
+}
+
+.zpopup__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+}
+
+.zpopup__close svg {
+    display: block;
+    pointer-events: none;
+}
+
+.zpopup__close svg g path {
+    transition: 0.25s;
+}
+
+.zpopup__close:hover svg g path {
+    fill: var(--akcent);
+}
+
+.zpopup__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.zpopup__input {
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 16px;
+    font-size: 16px;
+    line-height: 135%;
+    color: var(--text);
+    border: 0;
+}
+
+.zpopup__input:focus {
+    outline: 2px solid var(--akcent);
+}
+
+.zpopup__button {
+    border-radius: 3px;
+    background-color: var(--akcent);
+    border: 0;
+    cursor: pointer;
+    line-height: 135%;
+    color: #fff;
+    padding: 16px;
+    font-size: 16px;
+    transition: 0.25s;
+}
+
+.zpopup__button:hover {
+    background-color: #a58865;
+}
+
+.zpopup__policy {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.zpopup__policy_checkbox {
+    display: none;
+}
+
+.zpopup__policy_checkbox:checked+.zpopup__policy_box {
+    background-color: var(--akcent);
+    background-image: url(assets/icons/card-okey.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.zpopup__policy_box {
+    width: 19px;
+    height: 19px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.zpopup__policy_text {
+    font-size: 13px;
+    line-height: 135%;
+    color: #e0e0e0;
+}
+
+.zpopup__policy_text a {
+    color: #e0e0e0;
+    transition: 0.25s;
+}
+
+.zpopup__policy_text a:hover {
+    color: var(--akcent);
+}
+
+.zsuccess_form h3 {
+    text-align: center;
+}
+
+.zpopup__success {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 542px;
+}
+
+.zpopup__success p {
+    text-align: center;
+    font-size: 13px;
+    line-height: 135%;
+    color: #e0e0e0;
+}
+
+@media screen and (max-width: 768px) {
+    .zpopup {
+        min-width: auto;
+        max-width: 640px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .zpopup {
+        padding: 20px;
+        gap: 16px;
+    }
+
+    .zpopup__inputs {
+        gap: 8px;
+    }
+
+    .zpopup__button {
+        font-size: 14px;
+    }
+
+    .zpopup__input {
+        font-size: 14px;
+    }
+
+    .zpopup__close {
+        top: -42px;
+    }
+}
+
+/* Форма звонка */
+
+
+/* Новое меню каталог */
+.zheader__catalog_btn {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    padding: 8px 25px;
+    border-radius: 3px;
+    background-color: var(--akcent);
+    gap: 10px;
+    border: 0;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.zheader__catalog_btn:hover {
+    background-color: #a58865;
+}
+
+.zheader__catalog_btn img {
+    width: 17px;
+    height: 17px;
+}
+
+.zheader__catalog_btn span {
+    color: #fff;
+    font-size: 16px;
+}
+
+.zcatalog {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 152px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.02), 0 8px 11px 0 rgba(0, 0, 0, 0.04), 0 20px 31px 0 rgba(0, 0, 0, 0.05), 0 39px 70px 0 rgba(0, 0, 0, 0.07);
+    background: #fff;
+}
+
+/* Новое меню каталог */

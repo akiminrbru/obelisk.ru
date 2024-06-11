@@ -200,27 +200,11 @@ document.addEventListener("DOMContentLoaded", () => {
             burger_btn.classList.toggle('active');
             body_item.classList.toggle('active');
             mobile_menu.classList.toggle('active');
-            catalog.classList.remove('active');
         });
     }
 
     // Каталог 
-    const catalog_back = document.querySelector('.zheader__catalog-btnBack');
-    const catalog_open = document.querySelector('.zheader__nav-catalogImg');
-    const catalog = document.querySelector('.zheader__catalog');
 
-
-    if (catalog_back) {
-        catalog_back.addEventListener('click', () => {
-            catalog.classList.remove('active');
-        });
-    }
-
-    if (catalog_open) {
-        catalog_open.addEventListener('click', () => {
-            catalog.classList.add('active');
-        });
-    }
 
     // FILTERS
 
@@ -251,23 +235,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         })
     }
-
-    // Каталог десктоп
-
-    let desktop_catalog_btn = document.querySelector('.zheader__catalog-btnWrap');
-    let desktop_catalog = document.querySelector('.zheader__catalog');
-
-    desktop_catalog_btn?.addEventListener('mouseenter', () => {
-        let catalog = desktop_catalog_btn.querySelector(".zheader__catalog");
-        catalog.classList.add('active');
-    });
-    desktop_catalog_btn?.addEventListener('mouseleave', () => {
-        let catalog = desktop_catalog_btn.querySelector(".zheader__catalog");
-        catalog.classList.remove('active');
-    });
-    desktop_catalog?.addEventListener('mouseleave', () => {
-        desktop_catalog.classList.remove('active');
-    })
 
     // Свайпер на детальной карточки
 
@@ -553,5 +520,83 @@ document.addEventListener("DOMContentLoaded", () => {
         e.stopPropagation();
     });
 
-});
+    // Открытие меню на мобилки
 
+    const catalog_btn_main = document.querySelector(".zheader__nav-catalogImg");
+    const catalog = document.querySelector(".zheader__catalog");
+    catalog_btn_main?.addEventListener('click', () => {
+        catalog_btn_main?.classList.toggle("active");
+        catalog?.classList.toggle('active');
+    });
+
+    const catalog_sub_btns = document.querySelectorAll(".zheader__catalog_item_arrow");
+    const catalog_sub_btns_array = Array.from(catalog_sub_btns);
+
+    console.log(catalog_sub_btns_array);
+
+    catalog_sub_btns_array?.map((item) => {
+        item?.addEventListener('click', (e) => {
+            const arrow = e?.target;
+            const subcatalog = e?.target?.parentNode?.parentNode?.querySelector('.zheader__subcatalog');
+            subcatalog?.classList.toggle("active");
+            arrow.classList.toggle("active");
+            let subsubcatalog;
+            if (!subcatalog) {
+                subsubcatalog =  e?.target?.parentNode?.parentNode?.querySelector('ul');
+                subsubcatalog.classList.toggle("active");
+
+            }
+        });
+    });
+
+    // Открытие модалки
+
+    const callback_open =  Array.from(document.querySelectorAll('.zopen-callback'));
+    const callback_form = document.querySelector(".zcallback_form");
+    const popup_close = Array.from(document.querySelectorAll(".zpopup__close"));
+    const popup_wrapper = Array.from(document.querySelectorAll(".zpopup_wrapper"));
+    const popup = Array.from(document.querySelectorAll(".zpopup"));
+    const popup_close_success =  Array.from(document.querySelectorAll(".zpopup__success_close")); 
+
+    // Открыть
+    callback_open?.map((item) => {
+        item?.addEventListener('click', () => {
+            callback_form?.classList.add("active");
+            body_item?.classList?.add('active');
+        });
+    });
+    
+    // Закрыть через кнопку
+    popup_close?.map((item) => {
+        item?.addEventListener("click", (e) => {
+            const wrapper = e?.currentTarget?.parentNode?.parentNode;
+            wrapper?.classList?.remove("active");
+            body_item?.classList?.remove('active');
+        });
+    });
+
+    // Закрыть через область
+    popup_wrapper?.map((item) => {
+        item?.addEventListener("click", (e) => {
+            e?.currentTarget?.classList?.remove('active');
+            body_item?.classList?.remove('active');
+        });
+    });
+
+    // Отмена наследования событий
+    popup?.map((item) => {
+        item?.addEventListener("click", (e) => {
+            e.stopPropagation();
+        });
+    });
+
+    // Закыть для успешной формы
+
+    popup_close_success?.map((item) => {
+        item?.addEventListener("click", (e) => {
+            const wrapper = e?.currentTarget?.parentNode?.parentNode.parentNode;
+            wrapper?.classList?.remove("active");
+            body_item?.classList?.remove('active');
+        });
+    });
+});
