@@ -502,8 +502,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const popup_cart_wrapper = document.querySelector('.zcartpopup_wrapper');
     const popup_cart = document.querySelector('.zcartpopup');
 
-    console.log(popup_cart_open)
-
     popup_cart_open?.addEventListener('click', () => {
         popup_cart_wrapper?.classList.toggle('active');
     });
@@ -518,35 +516,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     popup_cart?.addEventListener('click', (e) => {
         e.stopPropagation();
-    });
-
-    // Открытие меню на мобилки
-
-    const catalog_btn_main = document.querySelector(".zheader__nav-catalogImg");
-    const catalog = document.querySelector(".zheader__catalog");
-    catalog_btn_main?.addEventListener('click', () => {
-        catalog_btn_main?.classList.toggle("active");
-        catalog?.classList.toggle('active');
-    });
-
-    const catalog_sub_btns = document.querySelectorAll(".zheader__catalog_item_arrow");
-    const catalog_sub_btns_array = Array.from(catalog_sub_btns);
-
-    console.log(catalog_sub_btns_array);
-
-    catalog_sub_btns_array?.map((item) => {
-        item?.addEventListener('click', (e) => {
-            const arrow = e?.target;
-            const subcatalog = e?.target?.parentNode?.parentNode?.querySelector('.zheader__subcatalog');
-            subcatalog?.classList.toggle("active");
-            arrow.classList.toggle("active");
-            let subsubcatalog;
-            if (!subcatalog) {
-                subsubcatalog =  e?.target?.parentNode?.parentNode?.querySelector('ul');
-                subsubcatalog.classList.toggle("active");
-
-            }
-        });
     });
 
     // Открытие модалки
@@ -599,4 +568,64 @@ document.addEventListener("DOMContentLoaded", () => {
             body_item?.classList?.remove('active');
         });
     });
+
+    // Открытие меню 
+
+    const zmenu_btn = document.querySelector(".zheader__catalog_btn");
+    const zmenu_btn_icon = document.querySelector("#nav-icon");
+    const zmenu = document.querySelector(".zmenu");
+    zmenu_btn?.addEventListener('click', () => {
+        zmenu?.classList.toggle('active');
+        zmenu_btn_icon?.classList.toggle('open');
+    });
+
+    const zmenu_list_item_link = Array.from(document.querySelectorAll(".zmenu__list_item_link"));
+    zmenu_list_item_link[0].classList.add('active');
+    zmenu_list_item_link?.forEach(item => {
+        item?.addEventListener("mouseover", (e) => {
+            const link = e.currentTarget;
+            zmenu_list_item_link?.forEach(elem => elem.classList.remove('active'));
+            link?.classList.add("active");
+        });
+    });
+
+
+    // Открытие меню мобилка
+
+    const zmenumobile_links = Array.from(document.querySelectorAll('.zmenumobile_item_btn'));
+    const zmenumobile_links_back = Array.from(document.querySelectorAll('.zmenumobile_submenu_back'));
+
+    zmenumobile_links.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const elem = e.currentTarget.parentNode.lastElementChild;
+            elem?.classList.add('active');
+        });
+    });
+
+    zmenumobile_links_back.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const wrapper = e.currentTarget.parentNode;
+            wrapper?.classList.remove('active');
+        });
+    });
+
+    // Открытие подменю на мобилке
+
+    const zmenumobile_submenu_item = Array.from(document.querySelectorAll('.zmenumobile_submenu_btn'));
+    const zmenumobile_lastlinks_back = Array.from(document.querySelectorAll('.zmenumobile_lastmenu_back'));
+    zmenumobile_submenu_item?.forEach(item => {
+        item?.addEventListener('click', (e)=> {
+            const elem = e.currentTarget.parentNode.lastElementChild;
+            elem?.classList.add('active');
+        });
+    });
+    zmenumobile_lastlinks_back.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const wrapper = e.currentTarget.parentNode;
+            wrapper?.classList.remove('active');
+        });
+    });
+
+
 });
+
